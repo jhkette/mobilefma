@@ -1,0 +1,254 @@
+p,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+  line-height: 1.45;
+}
+.intro p {
+  padding: 12px 0;
+}
+h1 {
+  padding: 25px 0;
+}
+.intro h1 {
+  padding-bottom: 1px;
+  display: inline-block;
+  border-bottom: 4px solid #7aa7c6;
+  margin-bottom: 40px;
+}
+.container.ui-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+.lead-image.feature {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      rgba(114, 114, 114, 0.53)
+    ),
+    url("../images/app.png");
+  height: 245px;
+}
+
+.lead-image {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      rgba(114, 114, 114, 0.53)
+    ),
+    url("../images/bbk.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 355px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+
+.lead-image h1 {
+  color: white;
+  display: inline-block;
+  position: relative;
+  top: 90px;
+  left: 50%;
+  margin-left: -150px;
+  margin-bottom: 50px;
+  width: 320px;
+  padding-bottom: 1px;
+  border-bottom: 4px solid #7aa7c6;
+}
+
+.property-table {
+  padding: 25px 15px;
+}
+
+.lead-image.small {
+  height: 200px;
+}
+
+.ham.ui-link.ui-btn {
+  padding: 17px !important;
+  margin-left: 15px !important;
+  background-color:#7aa7c6;
+  border: 0 !important;
+}
+.ham.ui-link.ui-btn:hover{
+  background-color:#7aa7c6;
+
+}
+.ui-btn.lead {
+  position: absolute;
+  width: 190px;
+  top: 80%;
+  left: 50%;
+  margin: -90px;
+  background-color: #7aa7c6 !important;
+  font-size: 16px;
+  color: white !important;
+  text-shadow: none !important;
+  border: 0 !important;
+  border-radius: 4px;
+}
+
+.ui-btn.secondary {
+  margin: 0px 15px 30px 15px;
+  padding-right: 35px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d3d3d3 !important;
+  align-content: center;
+  align-items: center;
+  color: #484848 !important;
+  border-radius: 4px;
+}
+
+#common {
+  width: 200px;
+  margin-right: 25px;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7aa7c6;
+}
+
+/* .ui-page-theme-a.ui-bar-inherit.ui-header.ui-bar-inherit {
+  !important; 
+} */
+
+.ui-header.ui-bar-inherit {
+  border: 1px solid #2e2e2e !important;
+}
+
+.content-featured {
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+  margin-top: 15px;
+}
+
+.feature-text {
+  padding: 15px 35px 15px 15px;
+}
+
+.image {
+  padding: 10px 0px 10px 15px;
+}
+
+.image img {
+  width: 200px !important;
+}
+
+.mm-container {
+  margin-left: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 230px;
+}
+.location-container {
+  margin-left: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 290px;
+}
+
+.ui-btn::after {
+  background-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.back.ui-link.ui-icon-back {
+  border: 0;
+  background-color: #7aa7c6;
+  padding: 18px;
+}
+
+.ui-link.ui-btn.ui-icon-lock.ui-btn-icon-top {
+  border: 0;
+  background-color: #7aa7c6;
+  padding: 18px;
+}
+
+.ui-link.ui-btn.ui-icon-user.ui-btn-icon-top {
+  border: 0;
+  background-color: #7aa7c6;
+  padding: 18px;
+}
+
+.back.ui-link.ui-icon-back:hover {
+  border: 0;
+  background-color: #7aa7c6;
+  padding: 18px;
+}
+
+.home.ui-link.ui-btn.ui-icon-home {
+  border: 0;
+  background-color: #7aa7c6;
+  padding: 18px;
+}
+
+.property.ui-link.ui-btn.ui-icon-phone.ui-btn-icon-top {
+  margin-right: 5px;
+}
+
+.ui-link.ui-btn.ui-icon-phone.ui-btn-icon-top {
+  border: 0;
+  background-color: #7aa7c6;
+  padding: 18px;
+  margin-right: 25px;
+}
+
+.back-home {
+  padding: 0 15px;
+}
+
+.intro {
+  padding: 20px 15px;
+}
+.ui-mobile label {
+  font-size: 15px;
+  font-weight: normal;
+  display: block;
+}
+.label {
+  min-width: 45px;
+  display: block;
+}
+
+input[type="submit"] {
+  left: 15px !important;
+}
+.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+  width: 340px;
+  margin: 10px 35px;
+}
+
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
+  width: 180px;
+  margin: 35px 35px;
+  /* height: 20px; */
+}
+.container-checkboxes {
+  margin: 15px 35px;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-controls .ui-btn.ui-last-child {
+  padding-left: 40px;
+  font-weight: normal;
+  font-size: 15px !important;
+  border: 0;
+  background: #f9f9f9;
+}
