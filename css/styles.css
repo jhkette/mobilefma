@@ -119,7 +119,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #7aa7c6;
+  /* background-color: #7aa7c6; */
 }
 
 /* .ui-page-theme-a.ui-bar-inherit.ui-header.ui-bar-inherit {
