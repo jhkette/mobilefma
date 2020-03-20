@@ -21,22 +21,38 @@ $(document).on("pagecontainerbeforeshow", function (){
 
 
 $(document).on('pagebeforeshow', '#properties', function(){
-    const x = getProperties();
-    let h =''
-    for(i of x){
-        h += '<p>' + i.name + '</p>'
-        h +=  '<p>' + i.shortdescription + '</p>'
-    }
-    console.log(h)
-    $("#houses").html(h)
+    $.get("../data/houses.json", function (result, status) {
+        console.log(result)
+        let h =''
+        $.each(result, function(i, v) {
+        
+            h += '<li> <a href="#propertydetail" data-transition="slidefade">'    + v.name + '</a></li>'
+            h +=  '<li> <a href="#first" data-transition="slidefade">' + v.shortdescription + '</a></li>'
+        })
+        
+        $("#houses").html(h)
+
+       let p = result.filter(function(i){
+            return i.id == 3;
+        })
+    })
+    .fail(function (status){
+        const h = status.status + ' error. There was an error retreiving data'
+        $("#houses").html(h)
+    })
+    var urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams)
+   
   });
 
 
+// FOR PARAMS
 
-function  getProperties() {
-    let properties = JSON.parse(localStorage.getItem('result'));
-	return properties ;
-}
+//   $("#artdetailpage").live("pageshow", function(e) {
+//     var query = window.location.search;
+//     query = query.replace("?id=","");
+//     //query is now an ID, do stuff with it...
+//   });
 
 
 // $(document).on("pagecontainerbeforeshow", function (e, ui) {
