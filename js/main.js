@@ -8,39 +8,29 @@
 
 //
 
-
-
-
 $(document).on("pagebeforeshow", "#orchard", function() {
-  $("#unfavourite").hide()
+  $("#unfavourite").hide();
   var urlParams = new URLSearchParams(window.location.search);
   const y = urlParams.get("post");
   const allfaves = JSON.parse(localStorage.getItem("faves"));
-
-
-  const marked = allfaves.some((f) => f.id == y)
+  const marked = allfaves.some(f => f.id == y);
 
   $.get("../data/houses.json", function(result, status) {
-   
-    const p = result.filter((i) => i.id == y);
-  
+    const p = result.filter(i => i.id == y);
 
-    if(marked){
-      $("#favourite").hide()
-      $("#unfavourite").show()
+    if (marked) {
+      $("#favourite").hide();
+      $("#unfavourite").show();
       $("#unfavourite").on("tap", function() {
         removeFaves(p[0].id);
       });
-    } else{
-      $("#unfavourite").hide()
-    $("#favourite").on("tap", function() {
-      addFaves(p);
-    });
-   
-  }
-
-  })
-  .fail(function(status) {
+    } else {
+      $("#unfavourite").hide();
+      $("#favourite").on("tap", function() {
+        addFaves(p);
+      });
+    }
+  }).fail(function(status) {
     console.log(status.status + " error. There was an error retreiving data");
   });
 
@@ -53,10 +43,10 @@ $(document).on("pagebeforeshow", "#orchard", function() {
     }
     return faves;
   }
-  
+
   function addFaves(fave) {
     const faves = getFaves();
-    const found = faves.some((el) => el.id === fave[0].id) 
+    const found = faves.some(el => el.id === fave[0].id);
     if (!found) {
       faves.push(fave[0]);
       localStorage.setItem("faves", JSON.stringify(faves));
@@ -64,10 +54,10 @@ $(document).on("pagebeforeshow", "#orchard", function() {
   }
   function removeFaves(id) {
     const faves = getFaves();
-   
-    const amendedFaves = faves.filter((fave) => fave.id != id) 
+
+    const amendedFaves = faves.filter(fave => fave.id != id);
     console.log(amendedFaves);
-  
+
     localStorage.setItem("faves", JSON.stringify(amendedFaves));
   }
 });
@@ -137,9 +127,6 @@ $(document).on("pagebeforeshow", "#orchard", function() {
 //   }
 // }
 
-
-
-
 // function removeFaves(id) {
 //   const faves = getFaves();
 
@@ -151,4 +138,29 @@ $(document).on("pagebeforeshow", "#orchard", function() {
 //   localStorage.setItem("faves", JSON.stringify(amendedFaves));
 // }
 
-[[{"id":1,"name":"Churchill ","thumbnail":"churchill.jpg","shortdescription":"From £345 per night"}],[{"id":1,"name":"Churchill ","thumbnail":"churchill.jpg","shortdescription":"From £345 per night"}],[{"id":1,"name":"Churchill ","thumbnail":"churchill.jpg","shortdescription":"From £345 per night"}]]
+[
+  [
+    {
+      id: 1,
+      name: "Churchill ",
+      thumbnail: "churchill.jpg",
+      shortdescription: "From £345 per night"
+    }
+  ],
+  [
+    {
+      id: 1,
+      name: "Churchill ",
+      thumbnail: "churchill.jpg",
+      shortdescription: "From £345 per night"
+    }
+  ],
+  [
+    {
+      id: 1,
+      name: "Churchill ",
+      thumbnail: "churchill.jpg",
+      shortdescription: "From £345 per night"
+    }
+  ]
+];
