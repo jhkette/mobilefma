@@ -6,33 +6,35 @@
 
 // })
 
+//
+
+
 $(document).on("pagecontainerbeforeshow", function() {
-  console.log("ready!");
-  $("#favourite").on("click", function() {
-    const x = "orchard";
-    localStorage.setItem("fave", JSON.stringify(x));
-  });
+
 });
 
 $(document).on("pagebeforeshow", "#properties", function() {
   $.get("../data/houses.json", function(result, status) {
-    console.log(result);
+   
     let h = "";
     $.each(result, function(i, v) {
-      h +=
-        `<li> <a  href="orchard.html?post=${v.id}" data-transition="slidefade"> 
+      h += `<li> <a  href="orchard.html?post=${
+        v.id
+      }" data-transition="slidefade"> 
         ${v.name} 
         </a></li>`;
-      h +=
-        `<li> <a href="orchard.html?post=${v.id}" data-transition="slidefade" > 
+      h += `<li> <a href="orchard.html?post=${
+        v.id
+      }" data-transition="slidefade" > 
         ${v.shortdescription} 
         </a></li>`;
     });
 
     $("#houses").html(h);
   }).fail(function(status) {
-    const h = status.status + " error. There was an error retreiving data";
-    $("#houses").html(h);
+    $("#houses").html(
+      status.status + " error. There was an error retreiving data"
+    );
   });
 });
 
@@ -41,15 +43,60 @@ $(document).on("pagebeforeshow", "#orchard", function() {
   const y = urlParams.get("post");
 
   $.get("../data/houses.json", function(result, status) {
+   
     const p = result.filter(function(i) {
       return i.id == y;
     });
-    console.log(p)
+    // // add if else statement here to check if fave has been declared
+
+    // console.log('this is' + p + result)
+   
+    $("#favourite").on("click", function() {
+      addFaves(p);
+    });
+    $("#unfavourite").on("click", function() {
+      removeFaves(p[0].id);
+    });
+
+
+    function getFaves() {
+      let faves;
+      if (!localStorage.getItem("faves")) {
+        faves = [];
+      } else {
+        faves = JSON.parse(localStorage.getItem("faves"));
+      }
+      return faves;
+    }
+    
+    function addFaves(fave) {
+      const faves = getFaves();
+      console.log(fave)
+      const found = faves.some((el) => {
+        console.log(el)
+        return el.id == fave[0].id});
+      console.log(found)
+      
+      if (!found) {
+        faves.push(fave[0]);
+        localStorage.setItem("faves", JSON.stringify(faves));
+      }
+    }
+    function removeFaves(id) {
+      const faves = getFaves();
+     
+      const amendedFaves = faves.filter(function(fave) {
+       
+        return fave.id != id;
+      });
+      console.log(amendedFaves);
+    
+      localStorage.setItem("faves", JSON.stringify(amendedFaves));
+    }
 
   })
   .fail(function(status) {
-    const h = status.status + " error. There was an error retreiving data";
-    console.log(h);
+    console.log(status.status + " error. There was an error retreiving data");
   });
 });
 
@@ -81,3 +128,55 @@ $(document).on("pagebeforeshow", "#orchard", function() {
 // 		}, "json");
 // 	}
 // });
+
+// class Store {
+//   static getBooks() {
+//     let books;
+//     if(localStorage.getItem('books') === null) {
+//       books = [];
+//     } else {
+//       books = JSON.parse(localStorage.getItem('books'));
+//     }
+
+//     return books;
+//   }
+
+//   static displayBooks() {
+//     const books = Store.getBooks();
+
+//     books.forEach(function(book){
+//       const ui  = new UI;
+
+//       // Add book to UI
+//       ui.addBookToList(book);
+//     });
+//   }
+
+//   static addBook(book) {
+//     const books = Store.getBooks();
+
+//     books.push(book);
+
+//     localStorage.setItem('books', JSON.stringify(books));
+//   }
+
+//   static c
+//     localStorage.setItem('books', JSON.stringify(books));
+//   }
+// }
+
+
+
+
+// function removeFaves(id) {
+//   const faves = getFaves();
+
+//   const amendedFaves = faves.filter(function() {
+//     return faves.id != id;
+//   });
+//   console.log(amendedFaves);
+
+//   localStorage.setItem("faves", JSON.stringify(amendedFaves));
+// }
+
+[[{"id":1,"name":"Churchill ","thumbnail":"churchill.jpg","shortdescription":"From £345 per night"}],[{"id":1,"name":"Churchill ","thumbnail":"churchill.jpg","shortdescription":"From £345 per night"}],[{"id":1,"name":"Churchill ","thumbnail":"churchill.jpg","shortdescription":"From £345 per night"}]]
