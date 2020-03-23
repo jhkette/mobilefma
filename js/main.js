@@ -9,95 +9,67 @@
 //
 
 
-$(document).on("pagecontainerbeforeshow", function() {
 
-});
-
-$(document).on("pagebeforeshow", "#properties", function() {
-  $.get("../data/houses.json", function(result, status) {
-   
-    let h = "";
-    $.each(result, function(i, v) {
-      h += `<li> <a  href="orchard.html?post=${
-        v.id
-      }" data-transition="slidefade"> 
-        ${v.name} 
-        </a></li>`;
-      h += `<li> <a href="orchard.html?post=${
-        v.id
-      }" data-transition="slidefade" > 
-        ${v.shortdescription} 
-        </a></li>`;
-    });
-
-    $("#houses").html(h);
-  }).fail(function(status) {
-    $("#houses").html(
-      status.status + " error. There was an error retreiving data"
-    );
-  });
-});
 
 $(document).on("pagebeforeshow", "#orchard", function() {
+  $("#unfavourite").hide()
   var urlParams = new URLSearchParams(window.location.search);
   const y = urlParams.get("post");
+  const allfaves = JSON.parse(localStorage.getItem("faves"));
+
+
+  const marked = allfaves.some((f) => f.id == y)
 
   $.get("../data/houses.json", function(result, status) {
    
-    const p = result.filter(function(i) {
-      return i.id == y;
-    });
-    // // add if else statement here to check if fave has been declared
+    const p = result.filter((i) => i.id == y);
+  
 
-    // console.log('this is' + p + result)
-   
-    $("#favourite").on("click", function() {
+    if(marked){
+      $("#favourite").hide()
+      $("#unfavourite").show()
+      $("#unfavourite").on("tap", function() {
+        removeFaves(p[0].id);
+      });
+    } else{
+      $("#unfavourite").hide()
+    $("#favourite").on("tap", function() {
       addFaves(p);
     });
-    $("#unfavourite").on("click", function() {
-      removeFaves(p[0].id);
-    });
-
-
-    function getFaves() {
-      let faves;
-      if (!localStorage.getItem("faves")) {
-        faves = [];
-      } else {
-        faves = JSON.parse(localStorage.getItem("faves"));
-      }
-      return faves;
-    }
-    
-    function addFaves(fave) {
-      const faves = getFaves();
-      console.log(fave)
-      const found = faves.some((el) => {
-        console.log(el)
-        return el.id == fave[0].id});
-      console.log(found)
-      
-      if (!found) {
-        faves.push(fave[0]);
-        localStorage.setItem("faves", JSON.stringify(faves));
-      }
-    }
-    function removeFaves(id) {
-      const faves = getFaves();
-     
-      const amendedFaves = faves.filter(function(fave) {
-       
-        return fave.id != id;
-      });
-      console.log(amendedFaves);
-    
-      localStorage.setItem("faves", JSON.stringify(amendedFaves));
-    }
+   
+  }
 
   })
   .fail(function(status) {
     console.log(status.status + " error. There was an error retreiving data");
   });
+
+  function getFaves() {
+    let faves;
+    if (!localStorage.getItem("faves")) {
+      faves = [];
+    } else {
+      faves = JSON.parse(localStorage.getItem("faves"));
+    }
+    return faves;
+  }
+  
+  function addFaves(fave) {
+    const faves = getFaves();
+    const found = faves.some((el) => el.id === fave[0].id) 
+    if (!found) {
+      faves.push(fave[0]);
+      localStorage.setItem("faves", JSON.stringify(faves));
+    }
+  }
+  function removeFaves(id) {
+    const faves = getFaves();
+   
+    const amendedFaves = faves.filter((fave) => fave.id != id) 
+    console.log(amendedFaves);
+  
+    localStorage.setItem("faves", JSON.stringify(amendedFaves));
+  }
 });
 
 // FOR PARAMS
