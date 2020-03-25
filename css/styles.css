@@ -104,10 +104,10 @@ h1 {
   padding-right: 35px;
   display: flex;
   justify-content: space-between;
-  background-color: #d3d3d3 !important;
+  
   align-content: center;
   align-items: center;
-  color: #484848 !important;
+  
   border-radius: 4px;
 }
 
@@ -133,7 +133,6 @@ h1 {
 .content-featured {
   display: flex;
   justify-content: space-around;
-  height: 200px;
   margin-top: 15px;
 }
 

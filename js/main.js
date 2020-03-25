@@ -17,7 +17,9 @@ $(document).on("pagebeforeshow", "#orchard", function() {
 
   $.get("../data/houses.json", function(result, status) {
     const p = result.filter(i => i.id == y);
-
+    console.log(p)
+    $("#room-info").html(p[0].longdescription)
+    $("#area-info").html(p[0].area)
     if (marked) {
       $("#favourite").hide();
       $("#unfavourite").show();
