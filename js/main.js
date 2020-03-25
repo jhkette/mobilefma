@@ -9,13 +9,12 @@
 // turn marked into a function
 
 $(document).on("pagebeforeshow", "#orchard", function() {
-  $("#unfavourite").hide();
-  var urlParams = new URLSearchParams(window.location.search);
-  const y = urlParams.get("post");
-  getMarked(y);
+  const urlParams = new URLSearchParams(window.location.search);
+  const postid = urlParams.get("post");
+  getMarked(postid);
 
   $.get("../data/houses.json", function(result, status) {
-    const p = result.filter(i => i.id == y);
+    const p = result.filter(i => i.id == postid);
     console.log(p);
     $("#room-info")
       .html(p[0].longdescription)
@@ -29,14 +28,14 @@ $(document).on("pagebeforeshow", "#orchard", function() {
 
     $("#unfavourite").on("tap", function() {
       removeFaves(p[0].id);
-      getMarked(y);
+      getMarked(postid);
     });
 
     $("#favourite").on("tap", function() {
       addFaves(p);
-      getMarked(y);
+      getMarked(postid);
     });
-  }).fail(function(status) {
+  }, "json").fail(function(status) {
     console.log(status.status + " error. There was an error retreiving data");
   });
 
@@ -50,9 +49,9 @@ $(document).on("pagebeforeshow", "#orchard", function() {
     return faves;
   }
 
-  function getMarked(y) {
+  function getMarked(postid) {
     const allfaves = JSON.parse(localStorage.getItem("faves"));
-    const marked = allfaves.some(f => f.id == y);
+    const marked = allfaves.some(f => f.id == postid);
     if (marked) {
       $("#favourite").hide();
       $("#unfavourite").show();
@@ -60,7 +59,6 @@ $(document).on("pagebeforeshow", "#orchard", function() {
       $("#favourite").show();
       $("#unfavourite").hide();
     }
-    return marked;
   }
 
   function addFaves(fave) {

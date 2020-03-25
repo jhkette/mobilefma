@@ -15,7 +15,7 @@ $(document).on("pagebeforeshow", "#properties", function() {
     });
 
     $("#houses").html(h);
-  }).fail(function(status) {
+  }, "json").fail(function(status) {
     $("#houses").html(
       status.status + " error. There was an error retreiving data"
     );
