@@ -6,29 +6,35 @@
 
 // })
 
-//
+// turn marked into a function
 
 $(document).on("pagebeforeshow", "#orchard", function() {
   $("#unfavourite").hide();
   var urlParams = new URLSearchParams(window.location.search);
   const y = urlParams.get("post");
   const allfaves = JSON.parse(localStorage.getItem("faves"));
-  const marked = allfaves.some(f => f.id == y);
+  let marked = allfaves.some(f => f.id == y);
 
   $.get("../data/houses.json", function(result, status) {
     const p = result.filter(i => i.id == y);
     console.log(p)
-    $("#room-info").html(p[0].longdescription)
-    $("#area-info").html(p[0].area)
+    $("#room-info").html(p[0].longdescription).trigger( "create" );
+    $("#area-info").html(p[0].area).trigger( "create" );
+    $("#price").html(`Price ${p[0].price}`).trigger( "create" );
+     console.log(marked)
     if (marked) {
-      $("#favourite").hide();
-      $("#unfavourite").show();
+      $("#favourite").hide()
+      $("#unfavourite").show()
       $("#unfavourite").on("tap", function() {
+        $("#favourite").show()
+        $("#unfavourite").hide()
         removeFaves(p[0].id);
       });
     } else {
       $("#unfavourite").hide();
       $("#favourite").on("tap", function() {
+        $("#favourite").hide()
+        $("#unfavourite").show()
         addFaves(p);
       });
     }
