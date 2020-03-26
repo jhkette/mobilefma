@@ -61,8 +61,23 @@ h1 {
   background-color: 'red' !important;
   background-image: none;
   border-radius: 0;
-  height: 390px;
+  height: 430px;
   border: 0;
+  position: relative;
+}
+
+.fa-angle-double-right{
+  font-size: 3rem;
+  position: absolute;
+  top: 45%;
+  right: 1rem;
+}
+
+.fa-angle-double-left{
+  font-size: 3rem;
+  position: absolute;
+  top: 45%;
+  left: 1rem;
 }
 
 .lead-image h1 {

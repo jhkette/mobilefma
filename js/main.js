@@ -13,11 +13,32 @@ $(document).on("pagebeforeshow", "#orchard", function() {
   const postid = urlParams.get("post");
   getMarked(postid);
   const popupwidth = $(window).width() * 0.9;
-  $("#popupImage").css('width', popupwidth)
-  $("#popupImage").css( 'background-image', "url('../images/bbk.jpg')")
+  
     
   $.get("../data/houses.json", function(result, status) {
     const p = result.filter(i => i.id == postid);
+    $("#popupImage").css('width', popupwidth)
+    const x = "'../images/large/"+p[0].large[0] + "'";
+    const y = "'../images/large/"+p[0].large[1] + "'";
+    const z = "'../images/large/"+p[0].large[2] + "'";
+    // $('.fa-angle-double-left')
+    let counter = 1;
+    $("#popupImage").css( 'background-image', 'url('+y+')')
+    $("#popupImage").on('swipeleft', function(){
+      if(counter > 0){
+        counter --;
+      $("#right").fadeOut();
+      $("#popupImage").css( 'background-image', 'url('+x+')')
+      }
+     
+    })
+    $("#popupImage").on('swiperight', function(){
+      if(counter <2){
+        counter ++
+      $("#left").fadeOut();
+      $("#popupImage").css( 'background-image', 'url('+z+')')
+      }
+    })
     console.log(p);
     $("#room-info")
       .html(p[0].longdescription)
