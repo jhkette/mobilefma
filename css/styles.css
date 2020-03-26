@@ -34,7 +34,7 @@ h1 {
       rgba(114, 114, 114, 0.53)
     ),
     url("../images/app.png");
-  height: 245px;
+  height: 290px !important;
 }
 
 .lead-image {
@@ -46,12 +46,23 @@ h1 {
     url("../images/bbk.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  height: 355px;
+  
   width: 100%;
   background-position: center;
   background-size: cover;
   position: relative;
   padding: 0;
+  height: 390px !important;
+}
+
+#popupImage {
+  
+  margin: auto;
+  background-color: 'red' !important;
+  background-image: none;
+  border-radius: 0;
+  height: 390px;
+  border: 0;
 }
 
 .lead-image h1 {

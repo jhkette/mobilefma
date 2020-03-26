@@ -12,7 +12,10 @@ $(document).on("pagebeforeshow", "#orchard", function() {
   const urlParams = new URLSearchParams(window.location.search);
   const postid = urlParams.get("post");
   getMarked(postid);
-
+  const popupwidth = $(window).width() * 0.9;
+  $("#popupImage").css('width', popupwidth)
+  $("#popupImage").css( 'background-image', "url('../images/bbk.jpg')")
+    
   $.get("../data/houses.json", function(result, status) {
     const p = result.filter(i => i.id == postid);
     console.log(p);
@@ -79,105 +82,3 @@ $(document).on("pagebeforeshow", "#orchard", function() {
   }
 });
 
-// FOR PARAMS
-
-//   $("#artdetailpage").live("pageshow", function(e) {
-//     var query = window.location.search;
-//     query = query.replace("?id=","");
-//     //query is now an ID, do stuff with it...
-//   });
-
-// $(document).on("pagecontainerbeforeshow", function (e, ui) {
-// 	let page = ui.toPage[0].id;
-// 	if( page == "five" ) {
-// 		$.get("data/hotels.json", function(result, status) {
-// 		let hotel = "";
-// 		for (let i = 0; i < result.length; i++) {
-// 			hotel += "<li><a href='hotel.html?id=" +
-// 			result[i].id +
-// 			"'><img src='images/" +
-// 			result[i].thumbnail +
-// 			"'>" +
-// 			result[i].name +
-// 			"<p>" +
-// 			result[i].shortdescription +
-// 			"</p></a></li>";
-// 		}
-// 		$("#hotellist").html(hotel).listview("refresh");
-// 		}, "json");
-// 	}
-// });
-
-// class Store {
-//   static getBooks() {
-//     let books;
-//     if(localStorage.getItem('books') === null) {
-//       books = [];
-//     } else {
-//       books = JSON.parse(localStorage.getItem('books'));
-//     }
-
-//     return books;
-//   }
-
-//   static displayBooks() {
-//     const books = Store.getBooks();
-
-//     books.forEach(function(book){
-//       const ui  = new UI;
-
-//       // Add book to UI
-//       ui.addBookToList(book);
-//     });
-//   }
-
-//   static addBook(book) {
-//     const books = Store.getBooks();
-
-//     books.push(book);
-
-//     localStorage.setItem('books', JSON.stringify(books));
-//   }
-
-//   static c
-//     localStorage.setItem('books', JSON.stringify(books));
-//   }
-// }
-
-// function removeFaves(id) {
-//   const faves = getFaves();
-
-//   const amendedFaves = faves.filter(function() {
-//     return faves.id != id;
-//   });
-//   console.log(amendedFaves);
-
-//   localStorage.setItem("faves", JSON.stringify(amendedFaves));
-// }
-
-[
-  [
-    {
-      id: 1,
-      name: "Churchill ",
-      thumbnail: "churchill.jpg",
-      shortdescription: "From £345 per night"
-    }
-  ],
-  [
-    {
-      id: 1,
-      name: "Churchill ",
-      thumbnail: "churchill.jpg",
-      shortdescription: "From £345 per night"
-    }
-  ],
-  [
-    {
-      id: 1,
-      name: "Churchill ",
-      thumbnail: "churchill.jpg",
-      shortdescription: "From £345 per night"
-    }
-  ]
-];
