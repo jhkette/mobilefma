@@ -19,27 +19,32 @@ $(document).on("pagebeforeshow", "#orchard", function() {
     const p = result.filter(i => i.id == postid);
     $("#popupImage").css('width', popupwidth)
     let counter = 1;
-    const x = "'../images/large/"+p[0].large[0] + "'";
-    const y = "'../images/large/"+p[0].large[1] + "'";
-    const z = "'../images/large/"+p[0].large[2] + "'";
-    // $('.fa-angle-double-left')
-    
-    $("#popupImage").css( 'background-image', 'url('+x+')')
+
+    function getImage (counter){
+      const x = "'../images/large/"+p[0].large[counter] + "'";
+      return x
+    }
+ 
+    $("#popupImage").css( 'background-image', 'url('+getImage(counter)+')')
     
     $("#popupImage").on('swipeleft', function(){
 
       switch(true) {
         case counter  == 1:
-        $("#popupImage").css( 'background-image', 'url('+x+')')
+        
         counter --;
+        $("#popupImage").css( 'background-image', 'url('+getImage(counter)+')')
         $("#right").fadeOut();
+       
         break;
         
         case counter  == 2:
-        $("#popupImage").css( 'background-image', 'url('+y+')')
+        
         counter --;
+        $("#popupImage").css( 'background-image', 'url('+getImage(counter)+')')
         $("#left").fadeIn();
         $("#right").fadeIn();
+       
         break;
         
         case counter  == 0:
@@ -50,16 +55,20 @@ $(document).on("pagebeforeshow", "#orchard", function() {
     $("#popupImage").on('swiperight', function(){
       switch(true) {
         case counter  == 1:
-        $("#popupImage").css( 'background-image', 'url('+z+')')
+        
         counter ++;
+        $("#popupImage").css( 'background-image', 'url('+getImage(counter)+')')
         $("#left").fadeOut();
+       
         break;
         
         case counter  == 0:
-        $("#popupImage").css( 'background-image', 'url('+y+')')
+    
         counter ++;
+        $("#popupImage").css( 'background-image', 'url('+getImage(counter)+')')
         $("#left").fadeIn();
         $("#right").fadeIn();
+       
         break;
         
         case counter  == 2:
