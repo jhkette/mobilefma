@@ -14,31 +14,63 @@ $(document).on("pagebeforeshow", "#orchard", function() {
   getMarked(postid);
   const popupwidth = $(window).width() * 0.9;
   
-    
+    // use counter as a value for the array.
   $.get("../data/houses.json", function(result, status) {
     const p = result.filter(i => i.id == postid);
     $("#popupImage").css('width', popupwidth)
+    let counter = 1;
     const x = "'../images/large/"+p[0].large[0] + "'";
     const y = "'../images/large/"+p[0].large[1] + "'";
     const z = "'../images/large/"+p[0].large[2] + "'";
     // $('.fa-angle-double-left')
-    let counter = 1;
-    $("#popupImage").css( 'background-image', 'url('+y+')')
+    
+    $("#popupImage").css( 'background-image', 'url('+x+')')
+    
     $("#popupImage").on('swipeleft', function(){
-      if(counter > 0){
+
+      switch(true) {
+        case counter  == 1:
+        $("#popupImage").css( 'background-image', 'url('+x+')')
         counter --;
-      $("#right").fadeOut();
-      $("#popupImage").css( 'background-image', 'url('+x+')')
+        $("#right").fadeOut();
+        break;
+        
+        case counter  == 2:
+        $("#popupImage").css( 'background-image', 'url('+y+')')
+        counter --;
+        $("#left").fadeIn();
+        $("#right").fadeIn();
+        break;
+        
+        case counter  == 0:
+        break; 
       }
      
     })
     $("#popupImage").on('swiperight', function(){
-      if(counter <2){
-        counter ++
-      $("#left").fadeOut();
-      $("#popupImage").css( 'background-image', 'url('+z+')')
+      switch(true) {
+        case counter  == 1:
+        $("#popupImage").css( 'background-image', 'url('+z+')')
+        counter ++;
+        $("#left").fadeOut();
+        break;
+        
+        case counter  == 0:
+        $("#popupImage").css( 'background-image', 'url('+y+')')
+        counter ++;
+        $("#left").fadeIn();
+        $("#right").fadeIn();
+        break;
+        
+        case counter  == 2:
+        break; 
       }
     })
+    $("#popupImage" ).on( "popupafterclose", function( event, ui ) {
+      $("#left").fadeIn();
+        $("#right").fadeIn();
+      counter = 1;
+    } );
     console.log(p);
     $("#room-info")
       .html(p[0].longdescription)
