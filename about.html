@@ -1,138 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Mobile App Development</title>
-    <link
-    rel="stylesheet"
-    href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css"
-  />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/custom-theme.min.css" />
-    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
-  
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/config.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/57986a17e9.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <div data-role="page" id="about">
-        <div
-        data-role="panel"
-        id="navpanelabout"
-        data-position="right"
-        data-display="overlay"
-      >
-        <ul data-role="listview">
-          <li data-role="list-divider">Zedland</li>
-          <li>
-            <a
-              href="index.html#first"
-              data-transition="slidefade"
-              rel="external"
-              >Home</a
-            >
-          </li>
-          <li><a href="about.html" data-transition="slidefade">About</a></li>
-          <li>
-            <a href="contact.html" data-prefetch data-transition="slidefade"
-              >Contact</a
-            >
-          </li>
-          <li>
-            <a href="properties.html" data-transition="slidefade">Properties</a>
-          </li>
-          <li data-role="list-divider">Account</li>
-          <li>
-            <a
-              href="index.html#login"
-              data-transition="slidefade"
-              rel="external"
-              >Login</a
-            >
-          </li>
-          <li>
-            <a
-              href="index.html#register"
-              data-transition="slidefade"
-              rel="external"
-              >Register</a
-            >
-          </li>
-          <li>
-              <a href="favourites.html" data-transition="slidefade">Favourites</a>
-            </li>
-        </ul>
-      </div>
-      <div data-role="header">
-        <div data-role="navbar" class="header-nav">
-          <a
-            href="#navpanelabout"
-            class="ham"
-            data-icon="bars"
-            
-          ></a>
-          <div class="back-home">
-            <a
-              href="index.html#login"
-              data-transition="slideFade"
-              data-icon="lock"
-              class="property"
-              rel="external"
-              title="login"
-            ></a>
+<head>
+  <meta charset="utf-8" />
+  <title>Mobile App Development</title>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/custom-theme.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
 
-            <a
-              href="index.html#register"
-              data-icon="user"
-              data-transition="slideFade"
-              rel="external"
-              title="register"
-            ></a>
-            <a
-              data-rel="back"
-              data-icon="back"
-              data-transition="slideFade"
-              class="back"
-              title="back"
-            ></a>
-            <a
-              href="index.html#first"
-              rel="external"
-              data-icon="home"
-              data-transition="slideFade"
-              class="home"
-              title="home"
-            ></a>
-          </div>
-        </div>
-      </div>
-      <div data-role="content" class="container" class="flex-container">
-        <div class="lead-image small"></div>
-        <div class="intro">
-          <h1>About us</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
-            nobis dolore eligendi amet laudantium fugiat, dolorem maiores nihil
-            asperiores dolor sit inventore reprehenderit numquam harum sed
-            adipisci praesentium quae neque.
-          </p>
-        </div>
-      </div>
-      <div data-role="footer" data-position="fixed" data-id="footernav">
-        <div data-role="navbar">
-          <ul>
-            <li><a href="contact.html" data-prefetch>Contact</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+  <script src="https://kit.fontawesome.com/57986a17e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div data-role="page" id="about">
+    <div data-role="panel" id="navpanelabout" data-position="right" data-display="overlay">
+      <ul data-role="listview">
+        <li data-role="list-divider">Zedland</li>
+        <li>
+          <a href="index.html#first" data-transition="slidefade" rel="external">Home</a>
+        </li>
+        <li><a href="about.html" data-transition="slidefade">About</a></li>
+        <li>
+          <a href="contact.html" data-prefetch data-transition="slidefade">Contact</a>
+        </li>
+        <li>
+          <a href="properties.html" data-transition="slidefade">Properties</a>
+        </li>
+        <li data-role="list-divider">Account</li>
+        <li>
+          <a href="index.html#login" data-transition="slidefade" rel="external">Login</a>
+        </li>
+        <li>
+          <a href="index.html#register" data-transition="slidefade" rel="external">Register</a>
+        </li>
+        <li>
+          <a href="favourites.html" data-transition="slidefade">Favourites</a>
+        </li>
+      </ul>
+    </div>
+    <div data-role="header">
+      <div data-role="navbar" class="header-nav">
+        <a href="#navpanelabout" class="ham" data-icon="bars"></a>
+        <div class="back-home">
+          <a href="index.html#login" data-transition="slideFade" data-icon="lock" class="property" rel="external"
+            title="login"></a>
+
+          <a href="index.html#register" data-icon="user" data-transition="slideFade" rel="external"
+            title="register"></a>
+          <a data-rel="back" data-icon="back" data-transition="slideFade" class="back" title="back"></a>
+          <a href="index.html#first" rel="external" data-icon="home" data-transition="slideFade" class="home"
+            title="home"></a>
         </div>
       </div>
     </div>
-  </body>
+    <div data-role="content" class="container" class="flex-container">
+      <div class="lead-image small"></div>
+      <div class="intro">
+        <h1>About us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+          nobis dolore eligendi amet laudantium fugiat, dolorem maiores nihil
+          asperiores dolor sit inventore reprehenderit numquam harum sed
+          adipisci praesentium quae neque.
+        </p>
+      </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="footernav">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="contact.html" data-prefetch>Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

@@ -20,6 +20,7 @@ $(document).on("pagebeforeshow", "#favourites", function () {
 
     $('.fa-trash-o').on('tap', function () {
         var theId = $(this).attr('id')
+        $(this).parent().remove()
         console.log(theId)
         removeFaves(theId)
     })

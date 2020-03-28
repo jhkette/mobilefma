@@ -145,7 +145,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #7aa7c6; */
+  padding: 5px;
 }
 
 /* .ui-page-theme-a.ui-bar-inherit.ui-header.ui-bar-inherit {
@@ -194,10 +194,14 @@ h1 {
   width: 290px;
 }
 
+/* .ui-btn{
+  padding: 25px !important;
+} */
+
 .ui-btn::after {
-  background-size: 20px !important;
-  width: 20px !important;
-  height: 20px !important;
+  background-size: 25px !important;
+  width: 25px !important;
+  height: 25px !important;
 }
 
 .back.ui-link.ui-icon-back {

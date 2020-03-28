@@ -13,9 +13,9 @@ $(document).on("pagebeforeshow", "#orchard", function () {
     let counter = 1;
 
     function getImage(counter) {
-      return newImage = "'../images/large/" + p[0].large[counter] + "'";  
+      return newImage = `../images/large/${p[0].large[counter]}`;  
     }
-    $("#popupImage").css('background-image', 'url(' + getImage(counter) + ')')
+    $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
 
     $("#popupImage").on('swipeleft', function () {
 
@@ -23,7 +23,7 @@ $(document).on("pagebeforeshow", "#orchard", function () {
         case counter == 1:
 
           counter--;
-          $("#popupImage").css('background-image', 'url(' + getImage(counter) + ')')
+          $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
           $("#right").fadeOut();
 
           break;
@@ -31,7 +31,7 @@ $(document).on("pagebeforeshow", "#orchard", function () {
         case counter == 2:
 
           counter--;
-          $("#popupImage").css('background-image', 'url(' + getImage(counter) + ')')
+          $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
           $("#left").fadeIn();
           $("#right").fadeIn();
 
@@ -47,29 +47,28 @@ $(document).on("pagebeforeshow", "#orchard", function () {
         case counter == 1:
 
           counter++;
-          $("#popupImage").css('background-image', 'url(' + getImage(counter) + ')')
+          $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
           $("#left").fadeOut();
-
           break;
 
         case counter == 0:
 
           counter++;
-          $("#popupImage").css('background-image', 'url(' + getImage(counter) + ')')
+          $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
           $("#left").fadeIn();
           $("#right").fadeIn();
-
           break;
 
         case counter == 2:
           break;
       }
     })
-    $("#popupImage").on("popupafterclose", function (event, ui) {
+    $("#popupImage").on("popupafterclose", function () {
       $("#left").fadeIn();
       $("#right").fadeIn();
       counter = 1;
     });
+    // MB USE APPEND
     $("#room-info")
       .html(p[0].longdescription).trigger("create");
     $("#area-info")
