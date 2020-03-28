@@ -117,11 +117,8 @@ h1 {
   top: 80%;
   left: 50%;
   margin: -90px;
-  background-color: #7aa7c6 !important;
+ 
   font-size: 16px;
-  color: white !important;
-  text-shadow: none !important;
-  border: 0 !important;
   border-radius: 4px;
 }
 
@@ -228,6 +225,7 @@ h1 {
   padding: 18px;
 }
 
+
 .home.ui-link.ui-btn.ui-icon-home {
   border: 0;
   background-color: #7aa7c6;
@@ -243,6 +241,19 @@ h1 {
   background-color: #7aa7c6;
   padding: 18px;
   margin-right: 25px;
+}
+
+#favourited {
+  border: 1px solid #f54461;
+
+  background-color: #f8d9de;
+  border-radius: .3rem;
+  padding: 10px 45px;
+  font-weight: 900;
+  text-shadow: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }
 
 .back-home {

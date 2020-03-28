@@ -106,10 +106,10 @@ $(document).on("pagebeforeshow", "#orchard", function () {
     
     if (marked) {
       $("#favourite").hide();
-      $("#unfavourite").show();
+      $("#favourited").show();
     } else {
       $("#favourite").show();
-      $("#unfavourite").hide();
+      $("#favourited").hide();
     }
   }
 
