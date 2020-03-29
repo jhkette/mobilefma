@@ -1,145 +1,187 @@
 // #2A6793;
 
-$(document).on("pagecontainershow", function (e, ui) {
-  let page = ui.toPage[0].id;
-  console.log('page is '+ page)
-})
+
 
 $(document).on("pagecontainerbeforeshow", function (e, ui) {
-  const thisPage = $.mobile.pageContainer.pagecontainer('getActivePage' ).attr( 'id' );
-  if(thisPage == 'orchard'){
-  const urlParams = new URLSearchParams(window.location.search);
-  const postid = urlParams.get("post");
-  getMarked(postid);
-  const popupwidth = $(window).width() * 0.9;
+  const thisPage = $.mobile.pageContainer.pagecontainer('getActivePage').attr('id');
+  if (thisPage == 'orchard') {
+    const urlParams = new URLSearchParams(window.location.search);
+    const postid = urlParams.get("post");
+    getMarked(postid);
+    const popupwidth = $(window).width() * 0.9;
 
-  // use counter as a value for the array.
-  $.get("../data/houses.json", function (result, status) {
-    const p = result.filter(i => i.id == postid);
-   
-    // MB USE APPEND
-    $("#room-info")
-      .html(p[0].longdescription)
-      .trigger("create");
-    $("#area-info")
-      .html(p[0].area)
-      .trigger("create");
-    $("#price")
-      .html(`Price ${p[0].price}`)
-      .trigger("create");
+    // use counter as a value for the array.
+    $.get("../data/houses.json", function (result, status) {
+      const p = result.filter(i => i.id == postid);
 
-    $("#unfavourite").on("tap", function () {
-      removeFaves(p[0].id);
-      getMarked(postid);
-    });
+      // MB USE APPEND
+      $("#room-info")
+        .html(p[0].longdescription)
+        .trigger("create");
+      $("#area-info")
+        .html(p[0].area)
+        .trigger("create");
+      $("#price")
+        .html(`Price ${p[0].price}`)
+        .trigger("create");
 
-    $("#favourite").on("tap", function () {
-      addFaves(p);
-      getMarked(postid);
-    });
-     $("#popupImage").css('width', popupwidth)
-    let counter = 1;
+      $("#unfavourite").on("tap", function () {
+        removeFaves(p[0].id);
+        getMarked(postid);
+      });
 
-    function getImage(counter) {
-      return newImage = `../images/large/${p[0].large[counter]}`;  
-    }
-    $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
+      $("#favourite").on("tap", function () {
+        addFaves(p);
+        getMarked(postid);
+      });
+      $("#popupImage").css('width', popupwidth)
+      let counter = 1;
 
-    $("#popupImage").on('swipeleft', function () {
-
-      switch (true) {
-        case counter == 1:
-
-          counter--;
-          $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
-          $("#right").fadeOut();
-
-          break;
-
-        case counter == 2:
-
-          counter--;
-          $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
-          $("#left").fadeIn();
-          $("#right").fadeIn();
-
-          break;
-
-        case counter == 0:
-          break;
+      function getImage(counter) {
+        return newImage = `../images/large/${p[0].large[counter]}`;
       }
+      $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
 
-    })
-    $("#popupImage").on('swiperight', function () {
-      switch (true) {
-        case counter == 1:
+      $("#popupImage").on('swipeleft', function () {
 
-          counter++;
-          $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
-          $("#left").fadeOut();
-          break;
+        switch (true) {
+          case counter == 1:
 
-        case counter == 0:
+            counter--;
+            $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
+            $("#right").fadeOut();
 
-          counter++;
-          $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
-          $("#left").fadeIn();
-          $("#right").fadeIn();
-          break;
+            break;
 
-        case counter == 2:
-          break;
-      }
-    })
-    $("#popupImage").on("popupafterclose", function () {
-      $("#left").fadeIn();
-      $("#right").fadeIn();
-      counter = 1;
+          case counter == 2:
+
+            counter--;
+            $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
+            $("#left").fadeIn();
+            $("#right").fadeIn();
+
+            break;
+
+          case counter == 0:
+            break;
+        }
+
+      })
+      $("#popupImage").on('swiperight', function () {
+        switch (true) {
+          case counter == 1:
+
+            counter++;
+            $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
+            $("#left").fadeOut();
+            break;
+
+          case counter == 0:
+
+            counter++;
+            $("#popupImage").css('background-image', `url(' ${getImage(counter)}')`)
+            $("#left").fadeIn();
+            $("#right").fadeIn();
+            break;
+
+          case counter == 2:
+            break;
+        }
+      })
+      $("#popupImage").on("popupafterclose", function () {
+        $("#left").fadeIn();
+        $("#right").fadeIn();
+        counter = 1;
+      });
+    }, "json").fail(function (status) {
+      console.log(status.status + " error. There was an error retreiving data");
     });
-  }, "json").fail(function (status) {
-    console.log(status.status + " error. There was an error retreiving data");
-  });
 
-  function getFaves() {
-    let faves;
-    if (!localStorage.getItem("faves")) {
-      faves = [];
-    } else {
-      faves = JSON.parse(localStorage.getItem("faves"));
+
+    $( "#close" ).on("tap", function (){
+      $("#popupImage").popup( "close" )
+    })
+
+    function getMarked(postid) {
+
+      const allfaves = getFaves()
+      const marked = allfaves.some(f => f.id == postid);
+
+      if (marked) {
+        $("#favourite").hide();
+        $("#favourited").show();
+      } else {
+        $("#favourite").show();
+        $("#favourited").hide();
+      }
     }
-    return faves;
+
+
+  }
+});
+
+// TO CLOSE
+// 
+
+
+
+
+$(document).on("pagecontainerbeforeshow", function (e, ui) {
+  const thisPage = $.mobile.pageContainer.pagecontainer('getActivePage').attr('id');
+  if (thisPage == 'favourites') {
+
+
+    const faves = getFaves()
+    console.log(faves)
+    let text = "";
+    $.each(faves, function (i, v) {
+      text += `<div class="item"><li> <a  href="orchard.html?post=${
+    v.id
+  }" data-transition="slidefade"> 
+      ${v.name} 
+      </a></li>`;
+      text += `<i class="fa fa-trash-o" aria-hidden="true" id="${v.id}"></i></div>`;
+    });
+    $('#fave-list').html(text)
+
+    $('.fa-trash-o').on('tap', function () {
+      var theId = $(this).attr('id')
+      $(this).parent().remove()
+      console.log(theId)
+      removeFaves(theId)
+    })
+
+
   }
 
-  function getMarked(postid) {
-   
-    const allfaves = getFaves()
-    const marked = allfaves.some(f => f.id == postid);
-    
-    if (marked) {
-      $("#favourite").hide();
-      $("#favourited").show();
-    } else {
-      $("#favourite").show();
-      $("#favourited").hide();
-    }
-  }
+})
 
-  function addFaves(fave) {
-    const faves = getFaves();
-    const found = faves.some(el => el.id === fave[0].id);
-    if (!found) {
-      faves.push(fave[0]);
-      localStorage.setItem("faves", JSON.stringify(faves));
-    }
-  }
-
-  function removeFaves(id) {
-    const faves = getFaves();
-
-    const amendedFaves = faves.filter(fave => fave.id != id);
-    console.log(amendedFaves);
-
-    localStorage.setItem("faves", JSON.stringify(amendedFaves));
+// Helper functions
+function addFaves(fave) {
+  const faves = getFaves();
+  const found = faves.some(el => el.id === fave[0].id);
+  if (!found) {
+    faves.push(fave[0]);
+    localStorage.setItem("faves", JSON.stringify(faves));
   }
 }
-});
+
+function removeFaves(id) {
+  const faves = getFaves();
+
+  const amendedFaves = faves.filter(fave => fave.id != id);
+  console.log(amendedFaves);
+
+  localStorage.setItem("faves", JSON.stringify(amendedFaves));
+}
+
+
+function getFaves() {
+  let faves;
+  if (!localStorage.getItem("faves")) {
+    faves = [];
+  } else {
+    faves = JSON.parse(localStorage.getItem("faves"));
+  }
+  return faves;
+}

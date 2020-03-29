@@ -90,7 +90,7 @@ h1 {
   margin-bottom: 50px;
   width: 320px;
   padding-bottom: 1px;
-  border-bottom: 4px solid #7aa7c6;
+  border-bottom: 4px solid #2A6793;
 }
 
 .property-table {
@@ -104,11 +104,11 @@ h1 {
 .ham.ui-link.ui-btn {
   padding: 17px !important;
   margin-left: 15px !important;
-  background-color:#7aa7c6;
+  background-color:#2A6793;
   border: 0 !important;
 }
 .ham.ui-link.ui-btn:hover{
-  background-color:#7aa7c6;
+  background-color:#2A6793;
 
 }
 .ui-btn.lead {
@@ -127,7 +127,7 @@ h1 {
   padding-right: 35px;
   display: flex;
   justify-content: space-between;
-  background-color: #c6d7e4 !important;
+
   align-content: center;
   align-items: center;
   
@@ -203,32 +203,32 @@ h1 {
 
 .back.ui-link.ui-icon-back {
   border: 0;
-  background-color: #7aa7c6;
+  background-color: #2A6793;
   padding: 18px;
 }
 
 .ui-link.ui-btn.ui-icon-lock.ui-btn-icon-top {
   border: 0;
-  background-color: #7aa7c6;
+  background-color: #2A6793;
   padding: 18px;
 }
 
 .ui-link.ui-btn.ui-icon-user.ui-btn-icon-top {
   border: 0;
-  background-color: #7aa7c6;
+  background-color: #2A6793;
   padding: 18px;
 }
 
 .back.ui-link.ui-icon-back:hover {
   border: 0;
-  background-color: #7aa7c6;
+  background-color: #2A6793;
   padding: 18px;
 }
 
 
 .home.ui-link.ui-btn.ui-icon-home {
   border: 0;
-  background-color: #7aa7c6;
+  background-color: #2A6793;
   padding: 18px;
 }
 
@@ -238,7 +238,7 @@ h1 {
 
 .ui-link.ui-btn.ui-icon-phone.ui-btn-icon-top {
   border: 0;
-  background-color: #7aa7c6;
+  background-color: #2A6793;
   padding: 18px;
   margin-right: 25px;
 }
@@ -253,19 +253,32 @@ h1 {
 #favourited {
   
 
-  background-color: #f8d9de;
+  background-color: #facbd3;
   border-radius: .3rem;
-  padding: 10px 45px;
+  padding: 14px 45px;
   font-weight: 900;
-  text-shadow: none;
+ 
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  box-shadow: 2px 2px 4px #ffe4e4;
 }
 .fas.fa-heart::before{
   color: #ec3553 !important;
 
 }
+
+.fas.fa-times{
+  color: black;
+  font-size: 2.2rem;
+  position: relative;
+  left: 92%;
+  top: .75rem;
+  cursor: pointer;
+
+}
+
+
 .back-home {
   padding: 0 15px;
 }
