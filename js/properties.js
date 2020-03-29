@@ -1,4 +1,7 @@
-$(document).on("pagebeforeshow", "#properties", function() {
+
+$(document).on("pagecontainerbeforeshow", function (e, ui) {
+  const thisPage = $.mobile.pageContainer.pagecontainer('getActivePage' ).attr( 'id' );
+  if(thisPage == 'properties'){
   $.get("../data/houses.json", function(result, status) {
     let h = "";
     $.each(result, function(i, v) {
@@ -20,4 +23,5 @@ $(document).on("pagebeforeshow", "#properties", function() {
       status.status + " error. There was an error retreiving data"
     );
   });
+}
 });

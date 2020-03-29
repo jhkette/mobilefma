@@ -127,7 +127,7 @@ h1 {
   padding-right: 35px;
   display: flex;
   justify-content: space-between;
-  
+  background-color: #c6d7e4 !important;
   align-content: center;
   align-items: center;
   
@@ -243,8 +243,15 @@ h1 {
   margin-right: 25px;
 }
 
+#main-button{
+  width: 200px;
+  margin: auto;
+  position: relative;
+  top: 6rem;
+}
+
 #favourited {
-  border: 1px solid #f54461;
+  
 
   background-color: #f8d9de;
   border-radius: .3rem;
@@ -255,7 +262,10 @@ h1 {
   justify-content: space-between;
   margin-top: 15px;
 }
+.fas.fa-heart::before{
+  color: #ec3553 !important;
 
+}
 .back-home {
   padding: 0 15px;
 }

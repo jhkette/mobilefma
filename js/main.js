@@ -1,6 +1,13 @@
+// #2A6793;
 
+$(document).on("pagecontainershow", function (e, ui) {
+  let page = ui.toPage[0].id;
+  console.log('page is '+ page)
+})
 
-$(document).on("pagebeforeshow", "#orchard", function () {
+$(document).on("pagecontainerbeforeshow", function (e, ui) {
+  const thisPage = $.mobile.pageContainer.pagecontainer('getActivePage' ).attr( 'id' );
+  if(thisPage == 'orchard'){
   const urlParams = new URLSearchParams(window.location.search);
   const postid = urlParams.get("post");
   getMarked(postid);
@@ -9,7 +16,28 @@ $(document).on("pagebeforeshow", "#orchard", function () {
   // use counter as a value for the array.
   $.get("../data/houses.json", function (result, status) {
     const p = result.filter(i => i.id == postid);
-    $("#popupImage").css('width', popupwidth)
+   
+    // MB USE APPEND
+    $("#room-info")
+      .html(p[0].longdescription)
+      .trigger("create");
+    $("#area-info")
+      .html(p[0].area)
+      .trigger("create");
+    $("#price")
+      .html(`Price ${p[0].price}`)
+      .trigger("create");
+
+    $("#unfavourite").on("tap", function () {
+      removeFaves(p[0].id);
+      getMarked(postid);
+    });
+
+    $("#favourite").on("tap", function () {
+      addFaves(p);
+      getMarked(postid);
+    });
+     $("#popupImage").css('width', popupwidth)
     let counter = 1;
 
     function getImage(counter) {
@@ -68,23 +96,6 @@ $(document).on("pagebeforeshow", "#orchard", function () {
       $("#right").fadeIn();
       counter = 1;
     });
-    // MB USE APPEND
-    $("#room-info")
-      .html(p[0].longdescription).trigger("create");
-    $("#area-info")
-      .html(p[0].area).trigger("create");
-    $("#price")
-      .html(`Price ${p[0].price}`).trigger("create");
-
-    $("#unfavourite").on("tap", function () {
-      removeFaves(p[0].id);
-      getMarked(postid);
-    });
-
-    $("#favourite").on("tap", function () {
-      addFaves(p);
-      getMarked(postid);
-    });
   }, "json").fail(function (status) {
     console.log(status.status + " error. There was an error retreiving data");
   });
@@ -130,4 +141,5 @@ $(document).on("pagebeforeshow", "#orchard", function () {
 
     localStorage.setItem("faves", JSON.stringify(amendedFaves));
   }
+}
 });

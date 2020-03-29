@@ -1,4 +1,6 @@
-$(document).on("pagebeforeshow", "#favourites", function () {
+$(document).on("pagecontainerbeforeshow", function (e, ui) {
+    const thisPage = $.mobile.pageContainer.pagecontainer('getActivePage' ).attr( 'id' );
+    if(thisPage == 'favourites'){
   
 
     const faves = getFaves()
@@ -26,7 +28,7 @@ $(document).on("pagebeforeshow", "#favourites", function () {
     })
 
    
-   
+}
 
 })
 
