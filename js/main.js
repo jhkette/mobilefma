@@ -30,10 +30,10 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
       $('#email')
         .html(p[0].email)
         .trigger("create");
+        const tel = `<a href="tel:+${p[0].telephone}" class="ui-btn ui-icon-phone à ui-btn-icon-left ui-corner-all ui-btn-icon-notext"></a>`;
       $('#telephone')
-        .html(p[0].telephone)
+        .html(tel)
         .trigger("create");
-
       $("#unfavourite").on("tap", function () {
         removeFaves(p[0].id);
         getMarked(postid);
