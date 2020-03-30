@@ -121,17 +121,22 @@ h1 {
   font-size: 16px;
   border-radius: 4px;
 }
-
+.button-container{
+  display: flex;
+  justify-content: space-around;
+}
 .ui-btn.secondary {
-  margin: 0px 15px 30px 15px;
-  padding-right: 35px;
+  /* margin: 0px 15px 30px 15px; */
+  padding: 7px 10px 7px 20px;
   display: flex;
   justify-content: space-between;
 
   align-content: center;
   align-items: center;
-  
-  border-radius: 4px;
+  background-color: white !important;
+  border: 3px solid #2A6793 !important;
+  border-radius: 20px;
+  width: 35%;
 }
 
 #common {

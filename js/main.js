@@ -24,15 +24,16 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
       $("#price")
         .html(`Price ${p[0].price}`)
         .trigger("create");
-      $('#address')
+    
+        const tel = `<a href="tel:+${p[0].telephone}" class="ui-btn ui-icon-phone à ui-btn-icon-left ui-corner-all ui-btn-icon-notext">Call advertiser</a>`;
+      $('#telephone')
+        .html(tel)
+        .trigger("create");
+        $('#address')
         .html(p[0].address)
         .trigger("create");
       $('#email')
         .html(p[0].email)
-        .trigger("create");
-        const tel = `<a href="tel:+${p[0].telephone}" class="ui-btn ui-icon-phone à ui-btn-icon-left ui-corner-all ui-btn-icon-notext"></a>`;
-      $('#telephone')
-        .html(tel)
         .trigger("create");
       $("#unfavourite").on("tap", function () {
         removeFaves(p[0].id);
