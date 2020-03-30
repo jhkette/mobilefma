@@ -123,20 +123,24 @@ h1 {
 }
 .button-container{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* align-items: center; */
+  margin: 0 15px;
 }
 .ui-btn.secondary {
   /* margin: 0px 15px 30px 15px; */
   padding: 7px 10px 7px 20px;
   display: flex;
   justify-content: space-between;
-
+  margin-bottom: 20px;
   align-content: center;
   align-items: center;
   background-color: white !important;
   border: 3px solid #2A6793 !important;
-  border-radius: 20px;
-  width: 35%;
+  border-radius: 18px;
+  width: 85%;
 }
 
 #common {
@@ -289,7 +293,7 @@ h1 {
 }
 
 .intro {
-  padding: 20px 15px;
+  padding: 15px  15px 5px 15px;
 }
 .ui-mobile label {
   font-size: 15px;
