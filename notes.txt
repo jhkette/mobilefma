@@ -1,0 +1,5 @@
+// check theme - needs to be installed globally correctly,
+// jqm collapsiable set on property page
+// registration form
+// check html - remove unnessary divs
+// add readme

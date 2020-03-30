@@ -16,7 +16,7 @@ h1 {
 .intro h1 {
   padding-bottom: 1px;
   display: inline-block;
-  border-bottom: 4px solid #7aa7c6;
+  border-bottom: 7px solid #2A6793;
   margin-bottom: 40px;
 }
 .container.ui-content {
@@ -90,7 +90,7 @@ h1 {
   margin-bottom: 50px;
   width: 320px;
   padding-bottom: 1px;
-  border-bottom: 4px solid #2A6793;
+  border-bottom: 7px solid #2A6793;
 }
 
 .property-table {
