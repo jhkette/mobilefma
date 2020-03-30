@@ -13,7 +13,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
     // use counter as a value for the array.
     $.get("../data/houses.json", function (result, status) {
       const p = result.filter(i => i.id == postid);
-
+        console.log(p[0].email)
       // MB USE APPEND
       $("#room-info")
         .html(p[0].longdescription)
@@ -23,6 +23,15 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         .trigger("create");
       $("#price")
         .html(`Price ${p[0].price}`)
+        .trigger("create");
+      $('#address')
+        .html(p[0].address)
+        .trigger("create");
+      $('#email')
+        .html(p[0].email)
+        .trigger("create");
+      $('#telephone')
+        .html(p[0].telephone)
         .trigger("create");
 
       $("#unfavourite").on("tap", function () {
