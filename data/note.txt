@@ -1,4 +1,0 @@
-I'm using json files to store data in the application. 
-Using JSON files along with querystrings in URLS allows me to minimise the
-amount of HTML files used. For example, I only need one property page as opposed
-to several. 

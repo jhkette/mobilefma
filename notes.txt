@@ -3,3 +3,4 @@
 // registration form
 // check html - remove unnessary divs
 // add readme
+// check trigger - possibly use refresh on main.js
