@@ -1,93 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Mobile App Development</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link
-    rel="stylesheet"
-    href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css"
-  />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/custom-theme.min.css" />
-    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
-  
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/config.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
-    <script src="js/properties.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/favourites.js"></script>
-    <script
-      src="https://kit.fontawesome.com/57986a17e9.js"
-      crossorigin="anonymous"
-    ></script>
-   
-  </head>
 
-  <body>
-      <div data-role="page" id="orchard" data-add-back-btn="true">
-    <div
-      data-role="panel"
-      id="navpanelorchard"
-      data-position="right"
-      data-display="overlay"
-    >
+<head>
+  <meta charset="utf-8" />
+  <title>Mobile App Development</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/custom-theme.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+  <script src="js/properties.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/favourites.js"></script>
+  <script src="https://kit.fontawesome.com/57986a17e9.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div data-role="page" id="orchard" data-add-back-btn="true">
+    <div data-role="panel" id="navpanelorchard" data-position="right" data-display="overlay">
       <ul data-role="listview">
         <li data-role="list-divider">Zedland</li>
         <li>
-          <a href="index.html#first" data-transition="slidefade" rel="external"
-            >Home</a
-          >
+          <a href="index.html#first" data-transition="slidefade" rel="external">Home</a>
         </li>
         <li><a href="about.html" data-transition="slidefade">About</a></li>
         <li>
-          <a href="contact.html" data-prefetch data-transition="slidefade"
-            >Contact</a
-          >
+          <a href="contact.html" data-prefetch data-transition="slidefade">Contact</a>
         </li>
         <li>
           <a href="properties.html" data-transition="slidefade">Properties</a>
         </li>
         <li data-role="list-divider">Account</li>
         <li>
-          <a href="index.html#login" data-transition="slidefade" rel="external"
-            >Login</a
-          >
+          <a href="index.html#login" data-transition="slidefade" rel="external">Login</a>
         </li>
         <li>
-          <a
-            href="index.html#register"
-            data-transition="slidefade"
-            rel="external"
-            >Register</a
-          >
+          <a href="index.html#register" data-transition="slidefade" rel="external">Register</a>
         </li>
         <li>
-            <a href="favourites.html" data-transition="slidefade">Favourites</a>
-          </li>
+          <a href="favourites.html" data-transition="slidefade">Favourites</a>
+        </li>
       </ul>
     </div>
-  
+
     <div data-role="header">
       <div data-role="navbar" class="header-nav">
-        <a
-          href="#navpanelorchard"
-          class="ham"
-          data-icon="bars"
-         
-        ></a>
+        <a href="#navpanelorchard" class="ham" data-icon="bars"></a>
         <div class="back-home">
-         
-          <a
-            data-rel="back"
-            data-icon="back"
-            data-transition="slideFade"
-            class="back"
-            title="back"
-          ></a>
-        
+
+          <a data-rel="back" data-icon="back" data-transition="slideFade" class="back" title="back"></a>
+
         </div>
       </div>
     </div>
@@ -96,59 +64,71 @@
         <div class="lead-image feature"></div>
       </a>
       <div data-role="popup" id="popupImage" class="lead-image feature">
-          <i class="fas fa-times" id="close"></i>
-          <i class="fas fa-angle-double-left" id="left"></i>
-          <i class="fas fa-angle-double-right" id="right"></i>
-       
+        <i class="fas fa-times" id="close"></i>
+        <i class="fas fa-angle-double-left" id="left"></i>
+        <i class="fas fa-angle-double-right" id="right"></i>
+
+      </div>
+
+      <div class="feature-text">
+        <button type="button" id="favourite">Save favourite</button>
+        <div id="favourited">Added to favourites<i class="fas fa-heart"></i></button>
         </div>
-       
-          <div class="feature-text">
-            <button type="button" id="favourite">Save favourite</button>
-            <div id="favourited">Added to favourites<i class="fas fa-heart"></i></button>
-          </div>
-          <div data-role="popup" id="popupHouse" class="lead-image feature">
-              <p>House added!</p>
-           
-            </div>
-         
-           
-         
+        <div data-role="popup" id="popupHouse" class="lead-image feature">
+          <p>House added!</p>
+
         </div>
+
+
+
+      </div>
+     
 
       <div class="content-featured">
         <div class="image">
-        
-            <img src="./images/app1.png" alt="room">
-          
-          
+
+          <img src="./images/app1.png" alt="room">
+
+
         </div>
-        <div class="feature-text" >
-            <p id="price"></p>
+        <div class="feature-text">
+          <p id="price"></p>
           <h2>Room information</h2>
-          
+
           <p id="room-info">
-            
-  
-            
+
+
+
           </p>
         </div>
       </div>
       <div class="content-featured">
         <div class="image">
-          
-            <img src="./images/app1.png" alt="room"
-          />
+
+          <img src="./images/app1.png" alt="room" />
         </div>
-        <div class="feature-text" >
+        <div class="feature-text">
           <h2>Area information</h2>
-          
+
           <p id="area-info">
           </p>
-          
+
         </div>
-        
+
       </div>
-     
+      <div class="feature-text">
+          <div data-role="collapsible-set">
+  
+            <div data-role="collapsible" data-collapsed="true" data-theme="b">
+              <h3>Contact information</h3>
+              <p>I'm the collapsible set content for section 1.</p>
+            </div>
+  
+  
+          </div>
+  
+        </div>
+
       <div data-role="footer" data-position="fixed" data-id="footernav">
         <div data-role="navbar">
           <ul>
@@ -158,6 +138,7 @@
         </div>
       </div>
     </div>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
