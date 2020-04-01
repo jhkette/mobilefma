@@ -136,7 +136,7 @@ h1 {
   align-content: center;
   align-items: center;
   /* background-color: #fff !important; */
-  border: 3px solid #2a6793 !important;
+  /* border: 1px solid #2a6793 !important; */
   border-radius: 18px;
   width: 85%;
   
@@ -182,6 +182,10 @@ h1 {
 #price {
   font-size: 1.2rem;
   font-weight: 900;
+}
+
+.ui-checkbox{
+  width: 10rem;
 }
 
 .mm-container {

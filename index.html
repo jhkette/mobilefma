@@ -43,8 +43,8 @@
           <a href="#register" data-transition="slidefade">Register</a>
         </li>
         <li>
-            <a href="favourites.html" data-transition="slidefade">Favourites</a>
-          </li>
+          <a href="favourites.html" data-transition="slidefade">Favourites</a>
+        </li>
       </ul>
     </div>
     <div data-role="header">
@@ -63,7 +63,8 @@
     <div data-role="content" class="container">
       <div class="lead-image">
         <h1>Welcome to Zedland</h1>
-         <a href="properties.html" data-role="button" data-theme="b" data-transition="slidefade" id="main-button">View all properties</a>
+        <a href="properties.html" data-role="button" data-theme="b" data-transition="slidefade" id="main-button">View
+          all properties</a>
       </div>
       <div class="intro">
         <h2>Accusantium consequuntur modi</h2>
@@ -71,11 +72,11 @@
           perferendis eius, aliquam consectetur.</p>
       </div>
       <div class="button-container">
-      <a href="index.html#login" data-transition="slidefade" class="ui-btn secondary">Login<span
-          style="font-size: 1.5em; color: #949494;"><i class="fas fa-arrow-right"></i></span></a>
-      <a href="#register" data-transition="slidefade" class="ui-btn secondary">Register<span
-          style="font-size: 1.5em; color: #949494;"><i class="fas fa-arrow-right"></i></span></a>
-        </div>
+        <a href="index.html#login" data-transition="slidefade" class="ui-btn secondary">Login<span
+            style="font-size: 1.75em; color: #2a6793;"><i class="fas fa-arrow-right"></i></span></a>
+        <a href="#register" data-transition="slidefade" class="ui-btn secondary">Register<span
+            style="font-size: 1.75em; color: #2a6793;"><i class="fas fa-arrow-right"></i></span></a>
+      </div>
       <div class="content-featured">
         <div class="image">
           <a href="orchard.html" data-transition="slidefade"><img src="./images/design.jpg" alt="room" /></a>
@@ -139,25 +140,57 @@
       </div>
       <form id="searchForm">
         <div class="ui-field-contain">
-          
-            <div class="label"><label for="name"  class="ui-hidden-accessible">Name</label></div>
-            <input type="text" name="name" id="name" placeholder="name" class="property-input" minlength="5" required />
 
-          </div>
-          <div class="ui-field-contain">
-            <div class="label"><label for="password" class="ui-hidden-accessible">Password</label></div>
-            <input type="password" name="password" id="password" placeholder="search" class="property-input"
-              minlength="5" required />
+          <label for="studentnumber" class="ui-hidden-accessible">Student number</label>
+          <input type="number" name="studentnumber" id="studentnumber" placeholder="Student number"
+            class="property-input" minlength="5" required />
 
-          </div>
-          <div class="ui-field-contain">
-            <div class="label"><label for="email" class="ui-hidden-accessible">Email</label></div>
-            <input type="text" name="email" id="email" placeholder="email" class="property-input" minlength="5"
+        </div>
+        <div class="ui-field-contain">
+
+          <label for="firstname" class="ui-hidden-accessible">First name</label>
+          <input type="text" name="firstname" id="firstname" placeholder="First name" class="property-input"
+            minlength="5" required />
+
+        </div>
+        <div class="ui-field-contain">
+            <label for="lastname" class="ui-hidden-accessible">Last name</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Last name" class="property-input" minlength="5"
               required />
-
           </div>
-          <input type="submit" value="Submit" class="submit" />
-       
+        <div class="ui-field-contain">
+          <label for="programme" class="ui-hidden-accessible">Programme</label>
+          <legend>Programme type</legend>
+          <select id="programme" name="programme">
+             
+            <option value="History">History</option>
+            <option value="Art">Art</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Biology">Biology</option>
+            <option value="Chemistry">Chemistry</option>
+          </select>
+        </div>
+        <div data-role="ui-field-contain">
+          <fieldset data-role="controlgroup" data-type="horizontal">
+            <legend>Select room type</legend>
+            <input type="checkbox" name="checkbox-1" id="checkbox-1" class="checkbox" />
+            <label for="checkbox-1">Shared room</label>
+
+            <input type="checkbox" name="checkbox-2" id="checkbox-2" class="checkbox" />
+            <label for="checkbox-2">Flat</label>
+            <input type="checkbox" name="checkbox-3" id="checkbox-3" class="checkbox" />
+            <label for="checkbox-3">Flat type</label>
+          </fieldset>
+      </div>
+        
+        <div class="ui-field-contain">
+          <label for="startdate" class="ui-hidden-accessible">Start Date</label>
+          <input type="date" name="date" id="date" placeholder="" class="property-input" minlength="5"
+            required />
+        </div>
+        
+        <input type="submit" data-inline="true" value="Submit" class="submit" />
+
       </form>
     </div>
     <div data-role="footer" data-position="fixed" data-id="footernav">
@@ -185,8 +218,8 @@
         <li><a href="#login" data-transition="slidefade">Login</a></li>
         <li><a href="#register" data-transition="slidefade">Register</a></li>
         <li>
-            <a href="favourites.html" data-transition="slidefade">Favourites</a>
-    </li>
+          <a href="favourites.html" data-transition="slidefade">Favourites</a>
+        </li>
       </ul>
     </div>
     <div data-role="header">
