@@ -16,7 +16,7 @@ h1 {
 .intro h1 {
   padding-bottom: 1px;
   display: inline-block;
-  border-bottom: 7px solid #2A6793;
+  border-bottom: 7px solid #2a6793;
   margin-bottom: 40px;
 }
 .container.ui-content {
@@ -46,7 +46,7 @@ h1 {
     url("../images/bbk.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  
+
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -56,9 +56,8 @@ h1 {
 }
 
 #popupImage {
-  
   margin: auto;
-  background-color: 'red' !important;
+  background-color: "red" !important;
   background-image: none;
   border-radius: 0;
   height: 430px;
@@ -66,14 +65,14 @@ h1 {
   position: relative;
 }
 
-.fa-angle-double-right{
+.fa-angle-double-right {
   font-size: 3rem;
   position: absolute;
   top: 45%;
   right: 1rem;
 }
 
-.fa-angle-double-left{
+.fa-angle-double-left {
   font-size: 3rem;
   position: absolute;
   top: 45%;
@@ -90,7 +89,7 @@ h1 {
   margin-bottom: 50px;
   width: 320px;
   padding-bottom: 1px;
-  border-bottom: 7px solid #2A6793;
+  border-bottom: 7px solid #2a6793;
 }
 
 .property-table {
@@ -104,12 +103,11 @@ h1 {
 .ham.ui-link.ui-btn {
   padding: 17px !important;
   margin-left: 15px !important;
-  background-color:#2A6793;
+  background-color: #2a6793;
   border: 0 !important;
 }
-.ham.ui-link.ui-btn:hover{
-  background-color:#2A6793;
-
+.ham.ui-link.ui-btn:hover {
+  background-color: #2a6793;
 }
 .ui-btn.lead {
   position: absolute;
@@ -117,14 +115,14 @@ h1 {
   top: 80%;
   left: 50%;
   margin: -90px;
- 
+
   font-size: 16px;
   border-radius: 4px;
 }
-.button-container{
+.button-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
   /* align-items: center; */
   margin: 0 15px;
@@ -134,13 +132,14 @@ h1 {
   padding: 7px 10px 7px 20px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   align-content: center;
   align-items: center;
-  background-color: white !important;
-  border: 3px solid #2A6793 !important;
+  /* background-color: #fff !important; */
+  border: 3px solid #2a6793 !important;
   border-radius: 18px;
   width: 85%;
+  
 }
 
 #common {
@@ -212,32 +211,31 @@ h1 {
 
 .back.ui-link.ui-icon-back {
   border: 0;
-  background-color: #2A6793;
+  background-color: #2a6793;
   padding: 18px;
 }
 
 .ui-link.ui-btn.ui-icon-lock.ui-btn-icon-top {
   border: 0;
-  background-color: #2A6793;
+  background-color: #2a6793;
   padding: 18px;
 }
 
 .ui-link.ui-btn.ui-icon-user.ui-btn-icon-top {
   border: 0;
-  background-color: #2A6793;
+  background-color: #2a6793;
   padding: 18px;
 }
 
 .back.ui-link.ui-icon-back:hover {
   border: 0;
-  background-color: #2A6793;
+  background-color: #2a6793;
   padding: 18px;
 }
 
-
 .home.ui-link.ui-btn.ui-icon-home {
   border: 0;
-  background-color: #2A6793;
+  background-color: #2a6793;
   padding: 18px;
 }
 
@@ -247,12 +245,12 @@ h1 {
 
 .ui-link.ui-btn.ui-icon-phone.ui-btn-icon-top {
   border: 0;
-  background-color: #2A6793;
+  background-color: #2a6793;
   padding: 18px;
   margin-right: 25px;
 }
 
-#main-button{
+#main-button {
   width: 200px;
   margin: auto;
   position: relative;
@@ -260,40 +258,35 @@ h1 {
 }
 
 #favourited {
-  
-
   background-color: #facbd3;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   padding: 14px 45px;
   font-weight: 900;
- 
+
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
   box-shadow: 2px 2px 4px #ffe4e4;
 }
-.fas.fa-heart::before{
+.fas.fa-heart::before {
   color: #ec3553 !important;
-
 }
 
-.fas.fa-times{
+.fas.fa-times {
   color: black;
   font-size: 2.2rem;
   position: relative;
   left: 92%;
-  top: .75rem;
+  top: 0.75rem;
   cursor: pointer;
-
 }
-
 
 .back-home {
   padding: 0 15px;
 }
 
 .intro {
-  padding: 15px  15px 5px 15px;
+  padding: 15px 15px 5px 15px;
 }
 .ui-mobile label {
   font-size: 15px;
@@ -330,7 +323,7 @@ input[type="submit"] {
   background: #f9f9f9;
 }
 
-.item{
+.item {
   display: flex;
   justify-content: space-between;
 }
