@@ -219,8 +219,13 @@ h1 {
 }
 
 .ui-checkbox{
-  width: 10rem;
+  width: 8.5rem;
 }
+
+/* .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset{
+  width: 100% !important;
+  float: none !important;
+} */
 
 .mm-container {
   margin-left: 35px;
@@ -325,6 +330,13 @@ h1 {
 .intro {
   padding: 15px 15px 5px 15px;
 }
+
+form{
+  width: 80%;
+
+  padding: 10px 15px;
+  margin: auto;
+}
 .ui-mobile label {
   font-size: 15px;
   font-weight: normal;
@@ -335,12 +347,17 @@ h1 {
   display: block;
 }
 
+legend{
+  font-weight: 900;
+}
+
 input[type="submit"] {
   left: 15px !important;
 }
 .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
-  width: 340px;
-  margin: 10px 35px;
+  width: 390px;
+  float: none;
+  margin: 0;
 }
 
 .ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
