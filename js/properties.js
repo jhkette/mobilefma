@@ -5,16 +5,8 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
   $.get("../data/houses.json", function(result, status) {
     let h = "";
     $.each(result, function(i, v) {
-      h += `<li> <a  href="orchard.html?post=${
-        v.id
-      }" data-transition="slidefade"> 
-          ${v.name} 
-          </a></li>`;
-      h += `<li> <a href="orchard.html?post=${
-        v.id
-      }" data-transition="slidefade" > 
-          ${v.shortdescription} 
-          </a></li>`;
+      h += `<li class="ui-li-has-thumb"> <a  href="orchard.html?post=${v.id}" data-transition="slidefade">${v.name}</a></li>`;
+      h += `<li class="ui-li-has-thumb"> <a href="orchard.html?post=${v.id}" data-transition="slidefade">${v.shortdescription} </a></li>`;
     });
 
     $("#houses").html(h);

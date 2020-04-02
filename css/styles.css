@@ -10,8 +10,20 @@ h4 {
 .intro p {
   padding: 12px 0;
 }
+
+.intro h2 {
+  padding: 12px 0;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  color: #474747;
+}
 h1 {
   padding: 25px 0;
+}
+.feature-text h3 {
+  font-size: 1.4rem;
+  color: #474747;
+  margin-bottom: .8rem;
 }
 .intro h1 {
   padding-bottom: 1px;
@@ -136,7 +148,7 @@ h1 {
   align-content: center;
   align-items: center;
   /* background-color: #fff !important; */
-  /* border: 1px solid #2a6793 !important; */
+  border: 3px solid #2a6793 !important;
   border-radius: 18px;
   width: 85%;
   
@@ -167,9 +179,31 @@ h1 {
   margin-top: 15px;
 }
 
+.content-featured.blue {
+  background-color: #d6eeff;
+  height: 150px;
+  padding: 30px 0;
+  margin-bottom: 40px;
+
+}
+
+.content-featured.blue img {
+  position: relative;
+  top: -10px;
+}
+
 .feature-text {
   padding: 15px 35px 15px 15px;
 }
+
+.feature-text.blue {
+  
+  height: 140px;
+  padding: 0px 0  0 25px;
+  position: relative;
+  top: 10px;
+}
+
 
 .image {
   padding: 10px 0px 10px 15px;
@@ -334,4 +368,9 @@ input[type="submit"] {
 .item {
   display: flex;
   justify-content: space-between;
+}
+
+
+.ui-content .ui-listview {
+  margin: 10px 15px !important;
 }

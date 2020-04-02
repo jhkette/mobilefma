@@ -77,44 +77,8 @@
         <form>
           <input id="filterTable-input" data-type="search" />
         </form>
-        <table data-role="table" id="property-table" data-filter="true" data-input="#filterTable-input"
-          class="ui-responsive">
-          <thead>
-            <tr>
-              <th data-priority="1">Postcode</th>
-              <th data-priority="persist">Propety name</th>
-              <th data-priority="2">Price</th>
-              <th data-priority="3">Property type</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>NW</th>
-              <td>
-                <a href="orchard.html" data-transition="slideFade">Flat on Orchard street</a>
-              </td>
-              <td>500</td>
-              <td>Flat</td>
-            </tr>
-            <tr>
-              <th>NE</th>
-              <td>
-                <a href="orchard.html" data-transition="slideFade">House in Stoke Newington</a>
-              </td>
-              <td>700</td>
-              <td>House</td>
-            </tr>
-            <tr>
-              <th>SW</th>
-              <td>
-                <a href="orchard.html" data-transition="slideFade">Shared brixton flat</a>
-              </td>
-              <td>400</td>
-              <td>Shared</td>
-            </tr>
-          </tbody>
-        </table>
-        <ul id="houses" data-role="listview" class="ui-listview"></ul>
+       
+        <ul id="houses" data-role="listview"  data-filter="true" data-input="#filterTable-input"></ul>
 
       </div>
     </div>
