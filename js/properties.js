@@ -5,7 +5,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
   $.get("../data/houses.json", function(result, status) {
     let h = "";
     $.each(result, function(i, v) {
-      h += `<li class="ui-li-has-thumb"> <img src='../images/thumbs/app1.png'> 
+      h += `<li class="ui-li-has-thumb"> <img src='../images/thumbs/${v.thumbnail}'> 
       <div class="list-flex"><a  href="orchard.html?post=${v.id}" data-transition="slidefade">${v.name}</a><p>${v.price}</p><p>${v.postcode}</p>  <div></li>`;
      
     });
