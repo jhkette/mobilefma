@@ -263,10 +263,9 @@ h1 {
 
 #favourited {
   background-color: #facbd3;
-  border-radius: 0.3rem;
+  border-radius: 1rem;
   padding: 14px 45px;
   font-weight: 900;
-
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
@@ -325,6 +324,11 @@ input[type="submit"] {
   font-size: 15px !important;
   border: 0;
   background: #f9f9f9;
+}
+
+
+.ui-field-contain{
+  border: 0 !important;
 }
 
 .item {
