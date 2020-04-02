@@ -374,3 +374,18 @@ input[type="submit"] {
 .ui-content .ui-listview {
   margin: 10px 15px !important;
 }
+
+.list-flex{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  
+}
+.ui-li-has-thumb {
+  padding-top: 0 !important;
+}
+
+.list-flex p{
+  padding-bottom: 0 !important;;
+  margin: .1em !important;
+}
