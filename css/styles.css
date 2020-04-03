@@ -16,7 +16,7 @@ h2 {
 
 .intro h2 {
   padding: 12px 0;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.1;
   
 }
@@ -43,22 +43,18 @@ h1 {
   flex-direction: column;
 }
 .lead-image.feature {
-  /* background-image: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0),
-      rgba(114, 114, 114, 0.53)
-    ),
-    url("../images/app.png"); */
+ 
+ 
   height: 290px !important;
 }
 
 .lead-image {
   background-image: linear-gradient(
-      to top,
+      to bottom,
       rgba(255, 255, 255, 0),
-      rgba(114, 114, 114, 0.53)
+      rgba(65, 65, 65, 0.53)
     ),
-    url("../images/bbk.jpg");
+    url("../images/leadimagemain.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
