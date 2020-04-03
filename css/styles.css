@@ -102,6 +102,11 @@ h1 {
   border-bottom: 7px solid #2a6793;
 }
 
+#desc{
+  top: 65%;
+  left: 185px;
+  padding-left: 0;
+}
 .property-table {
   padding: 25px 15px;
 }
@@ -209,7 +214,7 @@ h1 {
 }
 
 .image img {
-  width: 200px !important;
+  width: 180px !important;
 }
 
 #price {
@@ -417,7 +422,7 @@ input[type="submit"] {
 /* tel/sms */
 .ui-btn.ui-icon-phone {
   border: 0 !important;
-background-color: #2a6793 !important;
+background-color: #f9f9f9  !important;
 /* padding: 18px !important; */
 padding: 0 12px !important;
 }
@@ -436,11 +441,15 @@ padding: 0 12px !important;
 
 .ui-btn.ui-icon-mail {
   border: 0 !important;
-background-color: #2a6793 !important;
+background-color: #f9f9f9 !important;
 padding: 0 12px !important;
 /* background-size: 25px !important;
 width: 25px !important;
 height: 25px !important; */
 /* padding: 18px !important; */
 
+}
+
+#sms{
+  margin-left: 1.4rem;
 }

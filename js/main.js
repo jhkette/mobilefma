@@ -30,12 +30,12 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
 
         const tel = `<a href="tel:+${
           p[0].telephone
-        }" class="ui-btn ui-icon-phone à ui-btn-icon-left ui-corner-all ui-btn-icon-notext"></a>`;
+        }" class="ui-btn ui-icon-phone à ui-btn-icon-left ui-corner-all ui-btn-icon-notext ui-alt-icon" data-iconshadow="false"></a>`;
         $("#telephone").html(tel);
 
         const sms = `<a href="sms:+${
           p[0].telephone
-        }" class="ui-btn ui-icon-mail ui-btn-icon-left ui-corner-all ui-btn-icon-notext"></a>`;
+        }" class="ui-btn ui-icon-mail ui-btn-icon-left ui-corner-all ui-btn-icon-notext ui-alt-icon" data-iconshadow="false"></a>`;
         $("#sms").html(sms);
 
         $("#address").html(p[0].address);
