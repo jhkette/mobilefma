@@ -15,17 +15,18 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
       "../data/houses.json",
       function(result, status) {
         const p = result.filter(i => i.id == postid);
-
+         $('#leadimage').css("background-image",`url('../images/large/${p[0].lead}')`)
+         $("#desc").html(`${p[0].name}`)
         // MB USE APPEND
-        $("#room-info")
-          .html(p[0].longdescription)
-          .trigger("create");
-        $("#area-info")
-          .html(p[0].area)
-          .trigger("create");
-        $("#price")
-          .html(`Price ${p[0].price}`)
-          .trigger("create");
+        $("#room-info").html(p[0].longdescription)
+        
+        $("#area-info").html(p[0].area)
+         
+        $("#price").html(`Price ${p[0].price}`)
+         
+        $("#room").html(`<img src= "../images/interior/${p[0].interior}"/>` )
+        $("#area").html(`<img src= "../images/area/${p[0].areaimg}"/>` )
+       
 
         const tel = `<a href="tel:+${
           p[0].telephone

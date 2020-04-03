@@ -10,12 +10,15 @@ h4 {
 .intro p {
   padding: 12px 0;
 }
+h2 {
+  color: #474747;
+}
 
 .intro h2 {
   padding: 12px 0;
   font-size: 2.4rem;
   line-height: 1.1;
-  color: #474747;
+  
 }
 h1 {
   padding: 25px 0;
@@ -40,12 +43,12 @@ h1 {
   flex-direction: column;
 }
 .lead-image.feature {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to top,
       rgba(255, 255, 255, 0),
       rgba(114, 114, 114, 0.53)
     ),
-    url("../images/app.png");
+    url("../images/app.png"); */
   height: 290px !important;
 }
 
@@ -99,7 +102,6 @@ h1 {
   left: 50%;
   margin-left: -150px;
   margin-bottom: 50px;
-  width: 320px;
   padding-bottom: 1px;
   border-bottom: 7px solid #2a6793;
 }
@@ -148,9 +150,10 @@ h1 {
   align-content: center;
   align-items: center;
   /* background-color: #fff !important; */
-  border: 3px solid #2a6793 !important;
-  border-radius: 18px;
+  /* border: 3px solid #2a6793 !important;
+  border-radius: 18px; */
   width: 85%;
+  border-radius: 4px;
   
 }
 
@@ -180,10 +183,10 @@ h1 {
 }
 
 .content-featured.blue {
-  background-color: #d6eeff;
+  background-color: #e3f2fd;
   height: 150px;
-  padding: 30px 0;
-  margin-bottom: 40px;
+  padding: 30px 0 70px 0;
+  
 
 }
 
