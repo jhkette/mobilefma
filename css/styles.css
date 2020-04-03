@@ -217,9 +217,9 @@ h1 {
   font-weight: 900;
 }
 
-.ui-checkbox{
-  width: 8.5rem;
-}
+/* .ui-checkbox{
+   max-width: 8rem; 
+} */
 
 /* .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset{
   width: 100% !important;
@@ -330,7 +330,7 @@ h1 {
   padding: 15px 15px 5px 15px;
 }
 
-form{
+#registerForm{
   width: 80%;
 
   padding: 10px 15px;
@@ -354,7 +354,7 @@ input[type="submit"] {
   left: 15px !important;
 }
 .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
-  width: 390px;
+  width: 85%;
   float: none;
   margin: 0;
 }
@@ -397,6 +397,10 @@ input[type="submit"] {
   line-height: 1.4;
   
 }
+.list-flex a{
+  font-size: 1.35rem;
+  text-decoration: none;
+}
 .ui-li-has-thumb {
   padding-top: 0 !important;
 }
@@ -404,4 +408,39 @@ input[type="submit"] {
 .list-flex p{
   padding-bottom: 0 !important;;
   margin: .1em !important;
+}
+.contact{
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* tel/sms */
+.ui-btn.ui-icon-phone {
+  border: 0 !important;
+background-color: #2a6793 !important;
+/* padding: 18px !important; */
+padding: 0 12px !important;
+}
+
+.ui-btn.ui-icon-phone:after{
+  background-size: 30px !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.ui-btn.ui-icon-mail:after{
+  background-size: 30px !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.ui-btn.ui-icon-mail {
+  border: 0 !important;
+background-color: #2a6793 !important;
+padding: 0 12px !important;
+/* background-size: 25px !important;
+width: 25px !important;
+height: 25px !important; */
+/* padding: 18px !important; */
+
 }
