@@ -10,3 +10,10 @@
 
 
 // Look at it in firefox mobile
+
+//CSS CHNAGE NEEDED FOR MOBILE USABILITY/WORKING
+
+// change select from form
+
+// line break for house links on property page
+// use floats for image and text

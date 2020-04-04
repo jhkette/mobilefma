@@ -96,6 +96,7 @@ h1 {
   position: relative;
   top: 90px;
   left: 50%;
+  
   margin-left: -150px;
   margin-bottom: 50px;
   padding-bottom: 1px;
@@ -104,8 +105,9 @@ h1 {
 
 #desc{
   top: 65%;
-  left: 185px;
+  left: 175px;
   padding-left: 0;
+  font-size: 1.75rem !important;
 }
 .property-table {
   padding: 25px 15px;
@@ -178,14 +180,13 @@ h1 {
 }
 
 .content-featured {
-  display: flex;
-  justify-content: space-around;
+  
   margin-top: 15px;
 }
 
 .content-featured.blue {
   background-color: #e3f2fd;
-  height: 150px;
+ 
   padding: 30px 0 70px 0;
   
 
@@ -197,20 +198,26 @@ h1 {
 }
 
 .feature-text {
-  padding: 15px 35px 15px 15px;
+  
+  padding: 15px;
+}
+
+.feature-text.info{
+  min-height: 150px;
 }
 
 .feature-text.blue {
   
-  height: 140px;
-  padding: 0px 0  0 25px;
+  /* padding: 0px 0  0 25px;
   position: relative;
-  top: 10px;
+  top: 10px; */
 }
 
 
 .image {
-  padding: 10px 0px 10px 15px;
+  float: left;
+  padding: 20px 20px 0 20px;
+  clear: both;
 }
 
 .image img {
@@ -408,6 +415,10 @@ input[type="submit"] {
 }
 .ui-li-has-thumb {
   padding-top: 0 !important;
+}
+
+.ui-li-has-thumb p {
+  margin: 0 !important;
 }
 
 .list-flex p{
