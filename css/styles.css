@@ -199,7 +199,7 @@ h1 {
 
 .feature-text {
   
-  padding: 15px;
+  padding: 15px 20px;
 }
 
 .feature-text.info{
@@ -227,6 +227,7 @@ h1 {
 #price {
   font-size: 1.2rem;
   font-weight: 900;
+  color: #474747;
 }
 
 /* .ui-checkbox{
@@ -339,7 +340,7 @@ h1 {
 }
 
 .intro {
-  padding: 15px 15px 5px 15px;
+  padding: 15px 20px 5px 20px;
 }
 
 #registerForm{
