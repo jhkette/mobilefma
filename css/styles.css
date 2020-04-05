@@ -65,7 +65,7 @@ h1 {
   background-size: cover;
   position: relative;
   padding: 0;
-  height: 390px !important;
+  height: 360px !important;
 }
 
 #popupImage {
@@ -289,16 +289,7 @@ h1 {
   padding: 18px;
 }
 
-.property.ui-link.ui-btn.ui-icon-phone.ui-btn-icon-top {
-  margin-right: 5px;
-}
 
-.ui-link.ui-btn.ui-icon-phone.ui-btn-icon-top {
-  border: 0;
-  background-color: #2a6793;
-  padding: 18px;
-  margin-right: 25px;
-}
 
 #main-button {
   width: 200px;
@@ -371,11 +362,7 @@ input[type="submit"] {
   margin: 0;
 }
 
-.ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
-  width: 180px;
-  margin: 35px 35px;
-  /* height: 20px; */
-}
+
 .container-checkboxes {
   /* margin: 15px 35px; */
 }
@@ -387,6 +374,16 @@ input[type="submit"] {
   border: 0;
   background: #f9f9f9;
 }
+
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
+  width: 140px;
+  /* margin: 35px 35px; */
+  /* height: 20px; */
+}
+
+
+
+
 
 
 .ui-field-contain{
@@ -425,50 +422,33 @@ input[type="submit"] {
 .contact{
   display: flex;
   justify-content: flex-start;
-  position: relative;
-left: -10px;
-top: -20px;
+  margin-bottom: 2rem;
+
 
 }
 #contact {
-  border-bottom: 5px solid #2a6793;
-  display: inline-block;
-  padding-right: 50px;
-  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(42, 103, 147, 0.171);
+  /* display: inline-block; */
+ 
+ 
 }
 
-/* tel/sms */
-.ui-btn.ui-icon-phone {
-  border: 0 !important;
-background-color: #f9f9f9  !important;
-/* padding: 18px !important; */
-padding: 12px 14px !important;
+.fa-sms::before{
+  font-size: 1.85rem;
+  color: #2a6793;
+  margin-left: 2rem;
+  margin-top: 9rem;
+  /* margin-left: 3rem; */
 }
 
-.ui-btn.ui-icon-phone:after{
-  background-size: 35px !important;
-  width: 35px !important;
-  height: 35px !important;
+.fa-phone::before{
+  font-size: 1.85rem;
+  color: #2a6793;
+  margin-left: .4rem;
+  margin-top: 9rem;
 }
 
-
-
-.ui-btn.ui-icon-mail:after{
-  background-size: 35px !important;
-  width: 35px !important;
-  height: 35px !important;
-}
-
-.ui-btn.ui-icon-mail {
-  border: 0 !important;
-background-color: #f9f9f9 !important;
-padding: 12px 14px !important;
-/* background-size: 25px !important;
-width: 25px !important;
-height: 25px !important; */
-/* padding: 18px !important; */
-
-}
 
 #sms{
   margin-left: .8rem;

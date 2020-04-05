@@ -79,12 +79,12 @@
       </div>
       <div class="content-featured blue">
         <div class="image">
-          <a href="orchard.html" data-transition="slidefade"><img src="./images/design.jpg" alt="room" /></a>
+          <a href="orchard.html?post=1" data-transition="slidefade"><img src="./images/design.jpg" alt="room" /></a>
         </div>
         <div class="feature-text blue">
           <h3>Featured room</h3>
           <p>
-            <a href="orchard.html" data-transition="slidefade">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <a href="orchard.html?post=1" data-transition="slidefade">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Modi
               assumenda ipsam fugit. Quas aspernatur.</a>
           </p>
@@ -143,25 +143,25 @@
 
           <label for="studentnumber" class="ui-hidden-accessible">Student number</label>
           <input type="number" name="studentnumber" id="studentnumber" placeholder="Student number"
-            class="property-input" minlength="5" required />
+            class="property-input" minlength="5" required tabindex=3 />
 
         </div>
         <div class="ui-field-contain">
 
           <label for="firstname" class="ui-hidden-accessible">First name</label>
           <input type="text" name="firstname" id="firstname" placeholder="First name" class="property-input"
-            minlength="5" required />
+            minlength="5" required  tabindex=1/>
 
         </div>
         <div class="ui-field-contain">
             <label for="lastname" class="ui-hidden-accessible">Last name</label>
             <input type="text" name="lastname" id="lastname" placeholder="Last name" class="property-input" minlength="5"
-              required />
+              required  tabindex=2/>
           </div>
         <div class="ui-field-contain">
           <label for="programme" class="ui-hidden-accessible">Programme</label>
           <legend>Programme type</legend>
-          <select id="programme" name="programme" data-mini="true">
+          <select id="programme" name="programme" data-mini="true" tabindex=4>
              
             <option value="History">History</option>
             <option value="Art">Art</option>
@@ -173,7 +173,7 @@
         <div data-role="ui-field-contain">
           <fieldset data-role="controlgroup" data-type="horizontal">
             <legend>Select room type</legend>
-            <input type="checkbox" name="checkbox-1" id="checkbox-1" data-mini="true" class="checkbox" />
+            <input type="checkbox" name="checkbox-1" id="checkbox-1" data-mini="true" class="checkbox" tabindex=5/>
             <label for="checkbox-1">Shared room</label>
 
             <input type="checkbox" name="checkbox-2" id="checkbox-2" data-mini="true" class="checkbox" />
@@ -186,10 +186,10 @@
         <div class="ui-field-contain">
           <label for="startdate" class="ui-hidden-accessible">Start Date</label>
           <input type="date" name="date" id="date" placeholder="" class="property-input" minlength="5"
-            required />
+            required  tabindex=6/>
         </div>
         
-        <input type="submit" data-inline="true" value="Submit" class="submit" />
+        <input type="submit"  data-inline="true" value="Submit" class="submit" />
 
       </form>
     </div>
@@ -243,22 +243,26 @@
           voluptatem quos aliquam. Nulla, nemo.
         </p>
       </div>
+      <div class="feature-text">
       <form>
+        
         <div class="ui-field-contain">
-          <div class="location-container">
-            <div class="label"><label for="name1" class="ui-hidden-accessible">Name</label></div>
+          
+           <label for="name1" class="ui-hidden-accessible">Name</label>
             <input type="text" name="name" id="name1" placeholder="Name" class="property-input" minlength="5"
-              required />
+              required tabindex="1" />
           </div>
-          <div class="location-container">
-            <div class="label"><label for="password1" class="ui-hidden-accessible">Password</label></div>
+          <div class="ui-field-contain">
+            <label for="password1" class="ui-hidden-accessible">Password</label>
             <input type="password" name="password" id="password1" placeholder="Password" class="property-input"
-              minlength="5" required />
+              minlength="5" required tabindex="2"/>
           </div>
 
           <input type="submit" value="Submit" class="submit" />
-        </div>
+        
+      
       </form>
+    </div>
     </div>
     <div data-role="footer" data-position="fixed" data-id="footernav">
       <div data-role="navbar">
