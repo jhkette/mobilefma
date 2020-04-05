@@ -28,6 +28,8 @@ h1 {
   color: #474747;
   margin-bottom: .8rem;
 }
+
+
 .intro h1 {
   padding-bottom: 1px;
   display: inline-block;
@@ -206,13 +208,6 @@ h1 {
   min-height: 150px;
 }
 
-.feature-text.blue {
-  
-  /* padding: 0px 0  0 25px;
-  position: relative;
-  top: 10px; */
-}
-
 
 .image {
   float: left;
@@ -229,8 +224,8 @@ h1 {
   font-weight: 900;
   color: #474747;
 }
-
-/* .ui-checkbox{
+/* 
+.ui-checkbox{
    max-width: 8rem; 
 } */
 
@@ -349,6 +344,10 @@ h1 {
   padding: 10px 15px;
   margin: auto;
 }
+
+/* .ui-field-contain.date{
+  margin-top: 2rem;
+} */
 .ui-mobile label {
   font-size: 15px;
   font-weight: normal;
@@ -378,7 +377,7 @@ input[type="submit"] {
   /* height: 20px; */
 }
 .container-checkboxes {
-  margin: 15px 35px;
+  /* margin: 15px 35px; */
 }
 
 .ui-controlgroup-vertical .ui-controlgroup-controls .ui-btn.ui-last-child {
@@ -394,10 +393,7 @@ input[type="submit"] {
   border: 0 !important;
 }
 
-.item {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 
 .ui-content .ui-listview {
@@ -429,6 +425,16 @@ input[type="submit"] {
 .contact{
   display: flex;
   justify-content: flex-start;
+  position: relative;
+left: -10px;
+top: -20px;
+
+}
+#contact {
+  border-bottom: 5px solid #2a6793;
+  display: inline-block;
+  padding-right: 50px;
+  margin-bottom: 1.5rem;
 }
 
 /* tel/sms */
@@ -436,25 +442,27 @@ input[type="submit"] {
   border: 0 !important;
 background-color: #f9f9f9  !important;
 /* padding: 18px !important; */
-padding: 0 12px !important;
+padding: 12px 14px !important;
 }
 
 .ui-btn.ui-icon-phone:after{
-  background-size: 30px !important;
-  width: 30px !important;
-  height: 30px !important;
+  background-size: 35px !important;
+  width: 35px !important;
+  height: 35px !important;
 }
 
+
+
 .ui-btn.ui-icon-mail:after{
-  background-size: 30px !important;
-  width: 30px !important;
-  height: 30px !important;
+  background-size: 35px !important;
+  width: 35px !important;
+  height: 35px !important;
 }
 
 .ui-btn.ui-icon-mail {
   border: 0 !important;
 background-color: #f9f9f9 !important;
-padding: 0 12px !important;
+padding: 12px 14px !important;
 /* background-size: 25px !important;
 width: 25px !important;
 height: 25px !important; */
@@ -463,5 +471,35 @@ height: 25px !important; */
 }
 
 #sms{
-  margin-left: 1.4rem;
+  margin-left: .8rem;
 }
+
+
+/* collapsible */
+.ui-collapsible-heading-toggle.ui-btn{
+  padding: 8px 50px !important;
+
+}
+
+/* favourites page */
+
+#fave-list{
+  list-style: none;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.item {
+ 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+}
+
+
+

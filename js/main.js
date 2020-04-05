@@ -30,12 +30,12 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
 
         const tel = `<a href="tel:+${
           p[0].telephone
-        }" class="ui-btn ui-icon-phone à ui-btn-icon-left ui-corner-all ui-btn-icon-notext ui-alt-icon" data-iconshadow="false"></a>`;
+        }" class="ui-btn ui-icon-phone à ui-btn-icon-left ui-corner-all ui-btn-icon-notext ui-alt-icon"  data-iconshadow="false"></a>`;
         $("#telephone").html(tel);
 
         const sms = `<a href="sms:+${
           p[0].telephone
-        }" class="ui-btn ui-icon-mail ui-btn-icon-left ui-corner-all ui-btn-icon-notext ui-alt-icon" data-iconshadow="false"></a>`;
+        }" class="ui-btn ui-icon-mail ui-btn-icon-left ui-corner-all ui-btn-icon-notext ui-alt-icon" data-role="button" data-iconshadow="false"></a>`;
         $("#sms").html(sms);
 
         $("#address").html(p[0].address);
@@ -157,14 +157,14 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
     console.log(faves);
     let text = "";
     $.each(faves, function(i, v) {
-      text += `<div class="item"><li> <a  href="orchard.html?post=${
+      text += `<li class="item"> <a  href="orchard.html?post=${
         v.id
       }" data-transition="slidefade"> 
       ${v.name} 
-      </a></li>`;
+      </a>`;
       text += `<i class="fa fa-trash-o" aria-hidden="true" id="${
         v.id
-      }"></i></div>`;
+      }"></i></li>`;
     });
     $("#fave-list").html(text);
 

@@ -13,7 +13,8 @@
 
 //CSS CHNAGE NEEDED FOR MOBILE USABILITY/WORKING
 
-// change select from form
+// change select from form - SHOULD BE VERTICAL
+// check with mobile form usability guidelines
 
 // line break for house links on property page
 // use floats for image and text
