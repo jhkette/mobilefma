@@ -426,12 +426,16 @@ input[type="submit"] {
 
 
 }
-#contact {
+#extra {
   font-size: 1.3rem;
   border-bottom: 1px solid rgba(42, 103, 147, 0.171);
   /* display: inline-block; */
  
  
+}
+
+.ui-listview li {
+  font-size: 1rem !important;
 }
 
 .fa-sms::before{

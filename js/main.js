@@ -38,10 +38,10 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
         }"><i class="fas fa-sms"></i></a>`;
         $("#sms").html(sms);
 
-        $("#address").html(p[0].address);
+        $("#address").html(`Address: ${p[0].address}`);
 
-        $("#email").html(p[0].email);
-        $("#contact").listview("refresh");
+        $("#email").html(`Email: ${p[0].p[0].email}`);
+    
 
         $("#unfavourite").on("tap", function() {
           removeFaves(p[0].id);
