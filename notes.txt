@@ -18,3 +18,5 @@
 
 // line break for house links on property page DONE - changed page
 // use floats for image and text DONE
+
+// fix popup for added faves button
