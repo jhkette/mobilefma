@@ -68,6 +68,27 @@ h1 {
   height: 360px !important;
 }
 
+.lead-image.small{
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(65, 65, 65, 0.53)
+    ),
+    url("../images/large/1_largelead.jpg");
+    height: 200px !important;
+}
+
+
+.lead-image.about{
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(65, 65, 65, 0.53)
+    ),
+    url("../images/large/5_largelead.jpg");
+    height: 200px !important;
+}
+
 #popupImage {
   margin: auto;
   background-color: "red" !important;
@@ -482,7 +503,11 @@ input[type="submit"] {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+}
+
+.item a {
+  margin-left: 1.1rem;
 }
 
 

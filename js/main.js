@@ -40,7 +40,7 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
 
         $("#address").html(`Address: ${p[0].address}`);
 
-        $("#email").html(`Email: ${p[0].p[0].email}`);
+        $("#email").html(`Email: ${p[0].email}`);
     
 
         $("#unfavourite").on("tap", function() {
