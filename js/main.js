@@ -141,9 +141,6 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
     $("#close").on("tap", function() {
       
       $("#popupImage").popup("close");
-      // $("#left").fadeIn();
-      // $("#right").fadeIn();
-      // counter = 1;
     });
 
     function getMarked(postid) {

@@ -29,7 +29,7 @@
     "interior": "2_interior.jpg",
     "areaimg": "2_area.jpg",
     "lead": "2_largelead.jpg",
-    "large": ["remington_large.jpg", "remington_large1.jpg",  "remington_large2.jpg", "remington_large3.jpg"],
+    "large": ["1_sto.jpg", "2_sto.jpg",  "3_sto.jpg"],
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
     "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum"

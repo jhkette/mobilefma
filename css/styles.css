@@ -91,12 +91,13 @@ h1 {
 
 #popupImage {
   margin: auto;
-  background-color: "red" !important;
+ 
   background-image: none;
   border-radius: 0;
-  height: 430px;
+  /* height: 500% !important;; */
   border: 0;
   position: relative;
+  z-index: 10;
 }
 
 .fa-angle-double-right {
