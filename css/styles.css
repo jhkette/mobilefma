@@ -385,10 +385,6 @@ input[type="submit"] {
 }
 
 
-.container-checkboxes {
-  /* margin: 15px 35px; */
-}
-
 .ui-controlgroup-vertical .ui-controlgroup-controls .ui-btn.ui-last-child {
   padding-left: 40px;
   font-weight: normal;
