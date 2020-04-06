@@ -52,16 +52,49 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
           addFaves(p);
           getMarked(postid);
         });
+        
         $("#popupImage").css("width", popupwidth);
+        // $("#popupImage").on("tap", function(){
+ 
+        //   counter = 1;
+        //   $("#left").fadeIn();
+        //   $("#right").fadeIn();
+        //   $("#popupImage").css(
+        //     "background-image",
+        //     `url(' ${getImage(counter)}')`
+        //   );
+        // })
+        $("#popupImage").on("popupafterclose", function() {
+          $("#left").fadeIn();
+          $("#right").fadeIn();
+       
+          
+        });
         let counter = 1;
+       
+
+        $("#popupImage").bind({
+          popupbeforeposition: function(event, ui) { 
+            counter = 1;
+            getImage(counter)
+            $("#popupImage").css(
+              "background-image",
+              `url(' ${getImage(counter)}')`
+            );
+
+           }
+       });
+         
+        
 
         function getImage(counter) {
-          return (newImage = `../images/large/${p[0].large[counter]}`);
+          console.log(counter)
+          const newImage = `../images/slide/${p[0].large[counter]}`;
+          console.log(newImage)
+          return newImage
         }
-        $("#popupImage").css(
-          "background-image",
-          `url(' ${getImage(counter)}')`
-        );
+        
+        
 
         $("#popupImage").on("swipeleft", function() {
           switch (true) {
@@ -115,11 +148,7 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
               break;
           }
         });
-        $("#popupImage").on("popupafterclose", function() {
-          $("#left").fadeIn();
-          $("#right").fadeIn();
-          counter = 1;
-        });
+      
       },
       "json"
     ).fail(function(status) {
@@ -127,7 +156,11 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
     });
 
     $("#close").on("tap", function() {
+      
       $("#popupImage").popup("close");
+      // $("#left").fadeIn();
+      // $("#right").fadeIn();
+      // counter = 1;
     });
 
     function getMarked(postid) {
@@ -154,7 +187,7 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
     .attr("id");
   if (thisPage == "favourites") {
     const faves = getFaves();
-    console.log(faves);
+   
     let text = "";
     $.each(faves, function(i, v) {
       text += `<li class="item"> <a  href="orchard.html?post=${
@@ -173,7 +206,7 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
       $(this)
         .parent()
         .remove();
-      console.log(theId);
+     
       removeFaves(theId);
     });
   }
@@ -193,7 +226,7 @@ function removeFaves(id) {
   const faves = getFaves();
 
   const amendedFaves = faves.filter(fave => fave.id != id);
-  console.log(amendedFaves);
+ 
 
   localStorage.setItem("faves", JSON.stringify(amendedFaves));
 }

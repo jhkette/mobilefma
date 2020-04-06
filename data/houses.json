@@ -11,7 +11,7 @@
     "interior": "1_interior.jpg",
     "areaimg": "1_area.jpg",
     "lead": "1_largelead.jpg",
-    "large": ["orchard_large.jpg", "orchard_large1.jpg",  "orchard_large2.jpg"],
+    "large": ["1_isl.jpg", "2_isl.jpg",  "3_isl.jpg"],
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
     "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum"
