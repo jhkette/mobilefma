@@ -53,29 +53,16 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
           getMarked(postid);
         });
         
-        $("#popupImage").css("width", popupwidth);
-        // $("#popupImage").on("tap", function(){
- 
-        //   counter = 1;
-        //   $("#left").fadeIn();
-        //   $("#right").fadeIn();
-        //   $("#popupImage").css(
-        //     "background-image",
-        //     `url(' ${getImage(counter)}')`
-        //   );
-        // })
-        $("#popupImage").on("popupafterclose", function() {
-          $("#left").fadeIn();
-          $("#right").fadeIn();
        
-          
-        });
+     
         let counter = 1;
        
-
-        $("#popupImage").bind({
-          popupbeforeposition: function(event, ui) { 
+        $("#popupImage").css("width", popupwidth);
+        $("#popupImage").on({
+          popupbeforeposition: function() { 
             counter = 1;
+            $("#left").fadeIn();
+            $("#right").fadeIn();
             getImage(counter)
             $("#popupImage").css(
               "background-image",
@@ -84,14 +71,10 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
 
            }
        });
-         
         
 
         function getImage(counter) {
-          console.log(counter)
-          const newImage = `../images/slide/${p[0].large[counter]}`;
-          console.log(newImage)
-          return newImage
+          return `../images/slide/${p[0].large[counter]}`;   
         }
         
         
