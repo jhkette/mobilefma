@@ -8,7 +8,7 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
     const urlParams = new URLSearchParams(window.location.search);
     const postid = urlParams.get("post");
     getMarked(postid);
-    const popupwidth = $(window).width() * 0.9;
+   
 
     // use counter as a value for the array.
     $.get(
@@ -55,9 +55,9 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
         
        
      
-        let counter = 1;
-       
-        $("#popupImage").css("width", popupwidth);
+        let counter = 1; // initialise counter variable
+        const popupwidth = $(window).width() * 0.9; // get screensize * 0.9
+        $("#popupImage").css("width", popupwidth); // give popup a CSS width in relatino to screen width
         $("#popupImage").on({
           popupbeforeposition: function() { 
             counter = 1;

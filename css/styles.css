@@ -399,6 +399,8 @@ input[type="submit"] {
 
 .ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
   width: 140px;
+  font-size: 12px;
+  margin-bottom: 2rem;
   /* margin: 35px 35px; */
   /* height: 20px; */
 }
