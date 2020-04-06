@@ -358,14 +358,6 @@ h1 {
   margin: auto;
 }
 
-/* .ui-field-contain.date{
-  margin-top: 2rem;
-} */
-.ui-mobile label {
-  font-size: 15px;
-  font-weight: normal;
-  display: block;
-}
 .label {
   min-width: 45px;
   display: block;
@@ -373,6 +365,13 @@ h1 {
 
 legend{
   font-weight: 900;
+  width: 100%;
+  
+}
+.ui-mobile label {
+  font-weight: 900;
+  display: block;
+  width: 100%;
 }
 
 input[type="submit"] {

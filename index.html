@@ -159,9 +159,8 @@
             required tabindex=2 />
         </div>
         <div class="ui-field-contain">
-          <fieldset>
-            <legend>Programme type</legend>
-            <label for="programme" class="ui-hidden-accessible">Programme</label>
+          
+            <label for="programme">Programme name:</label>
 
             <select id="programme" name="programme" data-mini="true" tabindex=4>
 
@@ -171,11 +170,11 @@
               <option value="Biology">Biology</option>
               <option value="Chemistry">Chemistry</option>
             </select>
-          </fieldset>
+          
         </div>
         <div data-role="ui-field-contain">
           <fieldset data-role="controlgroup" data-type="horizontal">
-            <legend>Select room type</legend>
+            <legend>Select room type:</legend>
             <input type="checkbox" name="checkbox-1" id="checkbox-1" data-mini="true" class="checkbox" tabindex=5 />
             <label for="checkbox-1">Shared room</label>
 
@@ -187,8 +186,11 @@
         </div>
 
         <div class="ui-field-contain">
-          <label for="startdate" class="ui-hidden-accessible">Start Date</label>
+          <fieldset>
+          
+          <label for="startdate">Start Date</label>
           <input type="date" name="date" id="startdate" class="property-input" required tabindex=6 />
+        </fieldset>
         </div>
         <input type="submit" data-inline="true" value="Submit" class="submit" />
 

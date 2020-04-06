@@ -1,9 +1,7 @@
 // #2A6793;
 
 $(document).on("pagecontainerbeforeshow", function(e, ui) {
-  const thisPage = $.mobile.pageContainer
-    .pagecontainer("getActivePage")
-    .attr("id");
+  const thisPage = $.mobile.pageContainer.pagecontainer("getActivePage").attr("id");
   if (thisPage == "orchard") {
     const urlParams = new URLSearchParams(window.location.search);
     const postid = urlParams.get("post");
@@ -83,50 +81,33 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
           switch (true) {
             case counter == 1:
               counter--;
-              $("#popupImage").css(
-                "background-image",
-                `url(' ${getImage(counter)}')`
-              );
+              $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`);
               $("#right").fadeOut();
-
               break;
-
             case counter == 2:
               counter--;
-              $("#popupImage").css(
-                "background-image",
-                `url(' ${getImage(counter)}')`
-              );
+              $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`);
               $("#left").fadeIn();
-              $("#right").fadeIn();
-
+              $("#right").fadeIn(); 
               break;
-
             case counter == 0:
               break;
           }
         });
+
         $("#popupImage").on("swiperight", function() {
           switch (true) {
             case counter == 1:
               counter++;
-              $("#popupImage").css(
-                "background-image",
-                `url(' ${getImage(counter)}')`
-              );
+              $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`);
               $("#left").fadeOut();
               break;
-
             case counter == 0:
               counter++;
-              $("#popupImage").css(
-                "background-image",
-                `url(' ${getImage(counter)}')`
-              );
+              $("#popupImage").css( "background-image",`url(' ${getImage(counter)}')`);
               $("#left").fadeIn();
               $("#right").fadeIn();
               break;
-
             case counter == 2:
               break;
           }
