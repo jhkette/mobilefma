@@ -15,9 +15,6 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
       "../data/houses.json",
       function(result, status) {
         const [p] = result.filter(i => i.id == postid);
-        // const [x] = result.filter(i => i.id == postid);
-        // console.log(x)
-        // console.log(p)
          $('#leadimage').css("background-image",`url('../images/large/${p.lead}')`)
          $("#desc").html(`${p.name}`)
         
