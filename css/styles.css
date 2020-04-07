@@ -66,7 +66,7 @@ h1 {
       rgba(255, 255, 255, 0),
       rgba(65, 65, 65, 0.53)
     ),
-    url("../images/leadimagemain.jpg");
+    url("../images/large/londonscene.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -75,7 +75,7 @@ h1 {
   background-size: cover;
   position: relative;
   padding: 0;
-  height: 360px !important;
+  height: 385px !important;
 }
 
 .lead-image.small{
