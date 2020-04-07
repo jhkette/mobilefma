@@ -163,6 +163,15 @@ h1 {
     font-size: 1.75em  !important;
 
   }
+  .intro h2{
+    font-size: 1.55rem
+  }
+  .feature-text.info h2{
+     font-size: 1.35rem;
+  }
+  .content-featured .image img {
+    width: 125px !important;
+  }
 }
 
 #desc{
@@ -278,7 +287,7 @@ h1 {
 }
 
 .image img {
-  width: 180px !important;
+  width: 180px;
 }
 
 #price {

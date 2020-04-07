@@ -45,7 +45,7 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
         });
         
         let counter = 1; // initialise counter variable
-        const popupwidth = $(window).width() * 0.9; // get screensize * 0.9
+        const popupwidth = $(window).width()* 0.95; // get screensize * 0.9
         $("#popupImage").css("width", popupwidth); // give popup a CSS width in relatino to screen width
         $("#popupImage").on({
           popupbeforeposition: function() { 
