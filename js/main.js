@@ -90,19 +90,19 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
         });
 
       $("#popupImage").on("swiperight", function() {
-        $("#popupImage").fadeTo(0.2, 0.4)
+    
         switch (true) {
           case counter == 1:
             counter++;
            
             $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`)
-            $("#popupImage").fadeTo(400, 1)
+           
             $("#left").fadeOut();
             break;
           case counter == 0:
             counter++;
           
-            $("#popupImage").css( "background-image",`url(' ${getImage(counter)}')`)
+            $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`)
          
             $("#left").fadeIn();
             $("#right").fadeIn();
