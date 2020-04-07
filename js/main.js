@@ -1,7 +1,9 @@
 // #2A6793;
 
 $(document).on("pagecontainerbeforeshow", function(e, ui) {
-  const thisPage = $.mobile.pageContainer.pagecontainer("getActivePage").attr("id");
+  const thisPage = $.mobile.pageContainer
+    .pagecontainer("getActivePage")
+    .attr("id");
   if (thisPage == "orchard") {
     const urlParams = new URLSearchParams(window.location.search);
     const postid = urlParams.get("post");
@@ -12,37 +14,36 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
     $.get(
       "../data/houses.json",
       function(result, status) {
-        const p = result.filter(i => i.id == postid);
-         $('#leadimage').css("background-image",`url('../images/large/${p[0].lead}')`)
-         $("#desc").html(`${p[0].name}`)
-        // MB USE APPEND
-        $("#room-info").html(p[0].longdescription)
+        const [p] = result.filter(i => i.id == postid);
+        // const [x] = result.filter(i => i.id == postid);
+        // console.log(x)
+        // console.log(p)
+         $('#leadimage').css("background-image",`url('../images/large/${p.lead}')`)
+         $("#desc").html(`${p.name}`)
         
-        $("#area-info").html(p[0].area)
+        $("#room-info").html(p.longdescription)
+        
+        $("#area-info").html(p.area)
          
-        $("#price").html(`Price ${p[0].price}`)
+        $("#price").html(`Price ${p.price}`)
          
-        $("#room").html(`<img src= "../images/interior/${p[0].interior}"/>` )
-        $("#area").html(`<img src= "../images/area/${p[0].areaimg}"/>` )
+        $("#room").html(`<img src= "../images/interior/${p.interior}"/>` )
+        $("#area").html(`<img src= "../images/area/${p.areaimg}"/>` )
        
 
-        const tel = `<a href="tel:+${
-          p[0].telephone
-        }"><i class="fas fa-phone"></i></a>`;
+        const tel = `<a href="tel:+${p.telephone}"><i class="fas fa-phone"></i></a>`;
         $("#telephone").html(tel);
 
-        const sms = `<a href="sms:+${
-          p[0].telephone
-        }"><i class="fas fa-sms"></i></a>`;
+        const sms = `<a href="sms:+${p.telephone}"><i class="fas fa-sms"></i></a>`;
         $("#sms").html(sms);
 
-        $("#address").html(`Address: ${p[0].address}`);
+        $("#address").html(`Address: ${p.address}`);
 
-        $("#email").html(`Email: ${p[0].email}`);
+        $("#email").html(`Email: ${p.email}`);
     
 
         $("#unfavourite").on("tap", function() {
-          removeFaves(p[0].id);
+          removeFaves(p.id);
           getMarked(postid);
         });
 
@@ -72,7 +73,7 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
         
 
         function getImage(counter) {
-          return `../images/slide/${p[0].large[counter]}`;   
+          return `../images/slide/${p.large[counter]}`;   
         }
         
         
@@ -176,19 +177,16 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
 // Helper functions
 function addFaves(fave) {
   const faves = getFaves();
-  const found = faves.some(el => el.id === fave[0].id);
+  const found = faves.some(el => el.id === fave.id);
   if (!found) {
-    faves.push(fave[0]);
+    faves.push(fave);
     localStorage.setItem("faves", JSON.stringify(faves));
   }
 }
 
 function removeFaves(id) {
   const faves = getFaves();
-
   const amendedFaves = faves.filter(fave => fave.id != id);
- 
-
   localStorage.setItem("faves", JSON.stringify(amendedFaves));
 }
 

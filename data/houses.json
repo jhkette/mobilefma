@@ -77,7 +77,7 @@
     "interior": "5_interior.jpg",
     "areaimg": "5_area.jpg",
     "lead": "5_largelead.jpg",
-    "large": ["railton_large.jpg", "railton_large1.jpg",  "railton_large2.jpg", "railton_large3.jpg"],
+    "large": ["1_cla.jpg", "2_cla.jpg", "3_cla.jpg"],
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
     "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum"
