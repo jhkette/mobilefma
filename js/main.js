@@ -15,19 +15,15 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
       "../data/houses.json",
       function(result, status) {
         const [p] = result.filter(i => i.id == postid);
-         $('#leadimage').css("background-image",`url('../images/large/${p.lead}')`)
-         $("#desc").html(`${p.name}`)
         
+        $('#leadimage').css("background-image",`url('../images/large/${p.lead}')`)
+        $("#desc").html(`${p.name}`)
         $("#room-info").html(p.longdescription)
-        
         $("#area-info").html(p.area)
-         
         $("#price").html(`Price ${p.price}`)
-         
         $("#room").html(`<img src= "../images/interior/${p.interior}"/>` )
         $("#area").html(`<img src= "../images/area/${p.areaimg}"/>` )
-       
-
+        
         const tel = `<a href="tel:+${p.telephone}"><i class="fas fa-phone"></i></a>`;
         $("#telephone").html(tel);
 
@@ -35,7 +31,6 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
         $("#sms").html(sms);
 
         $("#address").html(`Address: ${p.address}`);
-
         $("#email").html(`Email: ${p.email}`);
     
 
@@ -49,8 +44,6 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
           getMarked(postid);
         });
         
-       
-     
         let counter = 1; // initialise counter variable
         const popupwidth = $(window).width() * 0.9; // get screensize * 0.9
         $("#popupImage").css("width", popupwidth); // give popup a CSS width in relatino to screen width
@@ -67,50 +60,57 @@ $(document).on("pagecontainerbeforeshow", function(e, ui) {
 
            }
        });
-        
 
-        function getImage(counter) {
-          return `../images/slide/${p.large[counter]}`;   
-        }
-        
-        
-
-        $("#popupImage").on("swipeleft", function() {
-          switch (true) {
-            case counter == 1:
-              counter--;
-              $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`);
-              $("#right").fadeOut();
-              break;
-            case counter == 2:
-              counter--;
-              $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`);
-              $("#left").fadeIn();
-              $("#right").fadeIn(); 
-              break;
-            case counter == 0:
-              break;
-          }
-        });
-
-        $("#popupImage").on("swiperight", function() {
-          switch (true) {
-            case counter == 1:
-              counter++;
-              $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`);
-              $("#left").fadeOut();
-              break;
-            case counter == 0:
-              counter++;
-              $("#popupImage").css( "background-image",`url(' ${getImage(counter)}')`);
-              $("#left").fadeIn();
-              $("#right").fadeIn();
-              break;
-            case counter == 2:
-              break;
-          }
-        });
+      function getImage(counter) {
+        return `../images/slide/${p.large[counter]}`;   
+      }
       
+
+      $("#popupImage").on("swipeleft", function() {
+      
+        switch (true) {
+          case counter == 1:
+            counter--;
+          
+            $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`)
+           
+            $("#right").fadeOut();
+            break;
+          case counter == 2:
+            counter--;
+        
+            $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`)
+           
+            $("#left").fadeIn();
+            $("#right").fadeIn(); 
+            break;
+          case counter == 0:
+            break;
+          }
+        });
+
+      $("#popupImage").on("swiperight", function() {
+        $("#popupImage").fadeTo(0.2, 0.4)
+        switch (true) {
+          case counter == 1:
+            counter++;
+           
+            $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`)
+            $("#popupImage").fadeTo(400, 1)
+            $("#left").fadeOut();
+            break;
+          case counter == 0:
+            counter++;
+          
+            $("#popupImage").css( "background-image",`url(' ${getImage(counter)}')`)
+         
+            $("#left").fadeIn();
+            $("#right").fadeIn();
+            break;
+          case counter == 2:
+            break;
+          }
+        });
       },
       "json"
     ).fail(function(status) {
