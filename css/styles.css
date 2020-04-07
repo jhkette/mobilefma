@@ -160,7 +160,7 @@ h1 {
 @media screen and (max-width: 375px) {
   .lead-image h1 {
     margin-left: -140px;
-    font-size: 1.75
+    font-size: 1.75em  !important;
 
   }
 }
@@ -495,7 +495,7 @@ input[type="submit"] {
 }
 
 .fa-sms::before{
-  font-size: 1.85rem;
+  font-size: 2.75rem;
   color: #2a6793;
   margin-left: 2rem;
   margin-top: 9rem;
@@ -503,7 +503,7 @@ input[type="submit"] {
 }
 
 .fa-phone::before{
-  font-size: 1.85rem;
+  font-size: 2.75rem;
   color: #2a6793;
   margin-left: .4rem;
   margin-top: 9rem;
