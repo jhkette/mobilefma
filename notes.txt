@@ -3,7 +3,7 @@
 // registration form (DONE -amend)
 // check html - remove unnessary divs (CHECK)
 // add readme 
-// check trigger - possibly use refresh on main.js
+
 // ADD images
 // Tidy propety page
 

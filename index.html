@@ -6,7 +6,6 @@
   <title>Mobile App Development</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
- 
   <link rel="stylesheet" href="css/custom-theme.min.css" />
   <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -16,13 +15,9 @@
   <script src="js/properties.js"></script>
   <script src="js/main.js"></script>
   <script src="https://kit.fontawesome.com/57986a17e9.js" crossorigin="anonymous"></script>
-
-
-
 </head>
-
 <body>
-  <div data-role="page" id="first" data-theme="a">
+  <div data-role="page" id="first">
     <div data-role="panel" id="navpanelhome" data-position="right" data-display="overlay">
       <ul data-role="listview">
         <li data-role="list-divider">Zedland</li>
@@ -142,18 +137,12 @@
       </div>
       <form id="registerForm">
         <div class="ui-field-contain">
-
           <label for="studentnumber" class="ui-hidden-accessible">Student number</label>
-          <input type="number" name="studentnumber" id="studentnumber" placeholder="Student number"
-            class="property-input" required tabindex=3 />
-
+          <input type="number" name="studentnumber" id="studentnumber" placeholder="Student number" class="property-input" required tabindex=3 />
         </div>
         <div class="ui-field-contain">
-
           <label for="firstname" class="ui-hidden-accessible">First name</label>
-          <input type="text" name="firstname" id="firstname" placeholder="First name" class="property-input"
-            minlength="5" required tabindex=1 />
-
+          <input type="text" name="firstname" id="firstname" placeholder="First name" class="property-input"minlength="5" required tabindex=1 />
         </div>
         <div class="ui-field-contain">
           <label for="lastname" class="ui-hidden-accessible">Last name</label>
@@ -161,18 +150,14 @@
             required tabindex=2 />
         </div>
         <div class="ui-field-contain">
-          
             <label for="programme">Programme name:</label>
-
             <select id="programme" name="programme" data-mini="true" tabindex=4>
-
               <option value="History">History</option>
               <option value="Art">Art</option>
               <option value="Computer Science">Computer Science</option>
               <option value="Biology">Biology</option>
               <option value="Chemistry">Chemistry</option>
             </select>
-          
         </div>
         <div data-role="ui-field-contain">
           <fieldset data-role="controlgroup" data-type="horizontal">
@@ -250,22 +235,15 @@
       </div>
       <div class="feature-text">
         <form>
-
           <div class="ui-field-contain">
-
             <label for="name1" class="ui-hidden-accessible">Name</label>
-            <input type="text" name="name" id="name1" placeholder="Name" class="property-input" minlength="5" required
-              tabindex=1 />
+            <input type="text" name="name" id="name1" placeholder="Name" class="property-input" minlength="5" required tabindex=1 />
           </div>
           <div class="ui-field-contain">
             <label for="password1" class="ui-hidden-accessible">Password</label>
-            <input type="password" name="password" id="password1" placeholder="Password" class="property-input"
-              minlength="5" required tabindex=2 />
+            <input type="password" name="password" id="password1" placeholder="Password" class="property-input"  minlength="5" required tabindex=2 />
           </div>
-
           <input type="submit" value="Submit" class="submit" />
-
-
         </form>
       </div>
     </div>
