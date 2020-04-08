@@ -101,7 +101,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         /*//// End of code for popup ////*/
       },"json")
       .fail(function (status) {
-      console.log(status.status + " error. There was an error retreiving data");
+        $("#desc").html(`${status.status} error. There was an error retreiving data`); // i'm adding a message if there was an error retreiving data.
     });
     // close popup on tap of 'x'
     $("#close").on("tap", function () {
