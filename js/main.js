@@ -5,6 +5,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
     const urlParams = new URLSearchParams(window.location.search);
     const postid = urlParams.get("post");
     getMarked(postid);
+    const popupwidth = $(window).width() * 0.95; // get screensize - multiply by 0.9.5
 
 
  
@@ -51,7 +52,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
           return `../images/slide/${p.large[counter]}`;
         }
 
-        const popupwidth = $(window).width() * 0.95; // get screensize - multiply by 0.9.5
+        
         $("#popupImage").css("width", popupwidth); // give popup a CSS width in relation to screen width
        
 
@@ -129,11 +130,23 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         $("#desc").html(`${status.status} error. There was an error retreiving data`); // i'm adding a message if there was an error retreiving data.
     });
 
-    $('#favourite').on("tap", function() {
-      setTimeout(function(){
-        $("#popupHouse").popup("close");
-      },2000)
-    });
+    // $('#favourite').on("tap", function() {
+      
+    // });
+
+    $("#favourite").on("tap", function (){
+    $("#popupHouse").popup("open", {  
+      x: popupwidth / 2,  
+      y: 200,  
+      // transition: "reverse slide"  
+  });
+  setTimeout(function(){
+    $("#popupHouse").popup("close");
+  },2000)
+})
+
+
+
     // close image popup on tap of 'x'
     $("#close").on("tap", function () {
        $("#popupImage").popup("close");
