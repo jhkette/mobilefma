@@ -44,7 +44,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
           getMarked(postid);
         });
 
-        /* ///// CODE FOR POPUP ////// */
+        /* ///// CODE FOR IMAGE POPUP ////// */
         let counter = 1; // initialise counter variable
         
         function getImage(counter) {
@@ -123,7 +123,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
               break;
           }
         });
-        /*//// End of code for popup ////*/
+        /*//// End of code for image popup ////*/
       },"json")
       .fail(function (status) {
         $("#desc").html(`${status.status} error. There was an error retreiving data`); // i'm adding a message if there was an error retreiving data.
@@ -132,9 +132,9 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
     $('#favourite').on("tap", function() {
       setTimeout(function(){
         $("#popupHouse").popup("close");
-      },2500)
+      },2000)
     });
-    // close popup on tap of 'x'
+    // close image popup on tap of 'x'
     $("#close").on("tap", function () {
        $("#popupImage").popup("close");
     });

@@ -228,6 +228,11 @@ h1 {
   
 }
 
+.ui-btn.pop{
+  border-radius: 4px;
+
+}
+
 #common {
   width: 200px;
   margin-right: 25px;
@@ -532,6 +537,23 @@ input[type="submit"] {
   padding: 8px 50px !important;
 
 }
+.container.orchard{
+  position: relative;
+}
+
+#popupHouse{
+  position: absolute;
+  top: 16rem !important;
+  width: 150px;
+  left: 75px !important;
+}
+
+#popupHouse p {
+  font-weight: 900;
+  margin: auto;
+  padding: .3rem .8rem;
+
+} 
 
 /* favourites page */
 
