@@ -10,6 +10,10 @@ h4 {
 .intro p {
   padding: 12px 0;
 }
+
+.bold{
+  font-weight: 900;
+}
 h2 {
   color: #474747;
   font-size: 1.23rem;
@@ -75,7 +79,7 @@ h1 {
   background-size: cover;
   position: relative;
   padding: 0;
-  height: 385px !important;
+  height: 385px;
 }
 
 .lead-image.small{
@@ -138,10 +142,13 @@ h1 {
 .fas.fa-times {
   color: #f1f7fa;
   font-size: 2.5rem;
-  position: relative;
-  left: 90%;
+  position: absolute;
+  right: 1.5rem;
   top: 0.75rem;
   cursor: pointer;
+}
+.fa.fa-trash-o::before{
+  font-size: 1.25rem;
 }
 
 .lead-image h1 {
@@ -157,26 +164,12 @@ h1 {
   border-bottom: 7px solid #2a6793;
 }
 
-@media screen and (max-width: 375px) {
-  .lead-image h1 {
-    margin-left: -140px;
-    font-size: 1.75em  !important;
 
-  }
-  .intro h2{
-    font-size: 1.55rem
-  }
-  .feature-text.info h2{
-     font-size: 1.35rem;
-  }
-  .content-featured .image img {
-    width: 125px !important;
-  }
-}
 
 #desc{
   top: 65%;
   left: 175px;
+ 
   padding-left: 0;
   font-size: 1.75rem !important;
 }
@@ -185,6 +178,10 @@ h1 {
 }
 
 .lead-image.small {
+ 
+}
+.lead-image.fave{
+  background-image: url('../images/large/3_largelead.jpg');
   height: 200px;
 }
 
@@ -504,7 +501,7 @@ input[type="submit"] {
 }
 
 .fa-sms::before{
-  font-size: 2.75rem;
+  font-size: 2.55rem;
   color: #2a6793;
   margin-left: 2rem;
   margin-top: 9rem;
@@ -512,17 +509,16 @@ input[type="submit"] {
 }
 
 .fa-phone::before{
-  font-size: 2.75rem;
+  font-size: 2.55rem;
   color: #2a6793;
   margin-left: .4rem;
   margin-top: 9rem;
 }
 .fa-envelope-square::before{
-  font-size: 2.75rem;
+  font-size: 2.55rem;
   color: #2a6793;
-  margin-left: 2rem;
+  margin-left: 2.2rem;
   margin-top: 9rem;
-
 }
 
 
@@ -558,8 +554,31 @@ input[type="submit"] {
 }
 
 .item a {
-  margin-left: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 
 
+
+/* responsive styles */
+@media screen and (max-width: 375px) {
+  .lead-image h1 {
+    margin-left: -140px;
+    font-size: 1.75em  !important;
+
+  }
+  .intro h2{
+    font-size: 1.55rem
+  }
+  .feature-text.info h2{
+     font-size: 1.35rem;
+  }
+  .content-featured .image img {
+    width: 125px !important;
+  }
+  #desc{
+    font-size: 1.55rem !important;
+    
+  
+  }
+}

@@ -33,8 +33,8 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         $("#email").html(emailicon);
        
 
-        $("#address").html(`Address: ${p.address}`);
-        $("#lookingfor").html(`Looking for: ${p.lookingfor}`);
+        $("#address").html(`<span class="bold">Address:</span> ${p.address}`);
+        $("#lookingfor").html(`<span class="bold">Looking for:</span> ${p.lookingfor}`);
 
         /*  When favourite button is tapped I call the  addFaves helper function
         which adds the favourite to local storage. I then called getMarked which changes the button/message that appears on the
@@ -53,6 +53,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 
         const popupwidth = $(window).width() * 0.95; // get screensize - multiply by 0.9.5
         $("#popupImage").css("width", popupwidth); // give popup a CSS width in relation to screen width
+       
 
         /* This function resets the popup the orginal background image etc each times it is called
          popupbeforeposition is fired each time just before popup appears */
@@ -61,7 +62,11 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
             counter = 1; // reset counter
             $("#left").fadeIn(); // reset left arrow
             $("#right").fadeIn(); //reset right arrow
-            $("#popupImage").css("background-image",`url(' ${getImage(counter)}')`); // add background image via css
+            $("#popupImage").css("background-image",`linear-gradient(
+              to top right,
+              rgba(255, 255, 255, 0),
+              rgba(65, 65, 65, 0.53)
+            ),url(' ${getImage(counter)}')`); // add background image via css
           }
         });
         /* on each swipe left - i'm checking for the value of counter then deducting the value
@@ -71,12 +76,20 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
           switch (true) {
             case counter == 1: 
               counter--; // counter - 1
-              $("#popupImage").css("background-image", `url(' ${getImage(counter)}')`) // set bg image
+              $("#popupImage").css("background-image",`linear-gradient(
+                to top right,
+                rgba(255, 255, 255, 0),
+                rgba(65, 65, 65, 0.53)
+              ),url(' ${getImage(counter)}')`)// set bg image
               $("#right").fadeOut(); // fadeout right arrow
               break;
             case counter == 2: 
               counter--;  // counter - 1
-              $("#popupImage").css("background-image", `url(' ${getImage(counter)}')`) // set bg image
+              $("#popupImage").css("background-image",`linear-gradient(
+                to top right,
+                rgba(255, 255, 255, 0),
+                rgba(65, 65, 65, 0.53)
+              ),url(' ${getImage(counter)}')`) // set bg image
               $("#left").fadeIn(); // This is the 'central' image so fade in both arrows
               $("#right").fadeIn();
               break;
@@ -89,12 +102,20 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
           switch (true) {
             case counter == 1:
               counter++;
-              $("#popupImage").css("background-image", `url(' ${getImage(counter)}')`)
+              $("#popupImage").css("background-image",`linear-gradient(
+                to top right,
+                rgba(255, 255, 255, 0),
+                rgba(65, 65, 65, 0.53)
+              ),url(' ${getImage(counter)}')`)
               $("#left").fadeOut();
               break;
             case counter == 0:
               counter++;
-              $("#popupImage").css("background-image", `url(' ${getImage(counter)}')`)
+              $("#popupImage").css("background-image",`linear-gradient(
+                to top right,
+                rgba(255, 255, 255, 0),
+                rgba(65, 65, 65, 0.53)
+              ),url(' ${getImage(counter)}')`)
               $("#left").fadeIn();
               $("#right").fadeIn();
               break;
@@ -140,9 +161,9 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
     $("#fave-list").html(text); // add text variable with html to 'fave-list'
 
     $(".fa-trash-o").on("tap", function () {
-      var theId = $(this).attr("id");
-      $(this).parent().remove();
-      removeFaves(theId);
+      var theId = $(this).attr("id"); // get id of icon that was pressed
+      $(this).parent().remove(); // remove the parent of 'this' ('this' in this instance is the icon). The parent is the <li> element. 
+      removeFaves(theId); // call remove faves helper function with theId as an argument. 
     });
   }
 });
