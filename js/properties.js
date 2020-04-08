@@ -1,4 +1,4 @@
-
+/* Code thats is run if page == properties */
 $(document).on("pagecontainerbeforeshow", function (e, ui) {
   const thisPage = $.mobile.pageContainer.pagecontainer('getActivePage' ).attr( 'id' );
   if(thisPage == 'properties'){

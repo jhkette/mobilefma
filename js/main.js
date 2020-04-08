@@ -28,6 +28,10 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 
         const sms = `<a href="sms:+${p.telephone}"><i class="fas fa-sms"></i></a>`;
         $("#sms").html(sms);
+    
+        const emailicon = `<a href="mailto:+${p.email}"><i class="fas fa-envelope-square"></i></a>`;
+        $("#emailicon").html(emailicon);
+       
 
         $("#address").html(`Address: ${p.address}`);
         $("#email").html(`Email: ${p.email}`);
@@ -129,11 +133,11 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
   if (thisPage == "favourites") {  // if thisPage == favourites run ...
     const faves = getFaves(); // use helper function to get favourites from local storage. This will be an array of objects or an empty array. 
     let text = ""; // initialise text variable with an empty string
-    $.each(faves, function (i, v) {
-      text += `<li class="item"> <a  href="orchard.html?post=${v.id}" data-transition="slidefade">${v.name} </a>`;
-      text += `<i class="fa fa-trash-o" aria-hidden="true" id="${v.id}"></i></li>`;
+    $.each(faves, function (i, v) { //foreach function
+      text += `<li class="item"> <a  href="orchard.html?post=${v.id}" data-transition="slidefade">${v.name} </a>`; // add html to text variable
+      text += `<i class="fa fa-trash-o" aria-hidden="true" id="${v.id}"></i></li>`; // add html to text variable
     });
-    $("#fave-list").html(text);
+    $("#fave-list").html(text); // add text variable with html to 'fave-list'
 
     $(".fa-trash-o").on("tap", function () {
       var theId = $(this).attr("id");
@@ -144,12 +148,13 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 });
 
 // Helper functions
+
 function addFaves(fave) {
-  const faves = getFaves();
-  const found = faves.some(el => el.id === fave.id);
-  if (!found) {
+  const faves = getFaves(); // get faves - return an array of favourites or an empty array
+  const found = faves.some(el => el.id === fave.id); //use 'some' function to check if the 'favourite' passed as a parameter is in the 'faves' array (ie is already a favourite)
+  if (!found) { // if not in favourites push to the faves array
     faves.push(fave);
-    localStorage.setItem("faves", JSON.stringify(faves));
+    localStorage.setItem("faves", JSON.stringify(faves)); // then add amended array to local storage
   }
 }
 
