@@ -14,7 +14,8 @@
     "large": ["1_isl.jpg", "2_isl.jpg",  "3_isl.jpg"],
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum"
+    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
+    "lookingfor": "A fun housemate"
     
        
 }, {
@@ -32,7 +33,8 @@
     "large": ["1_sto.jpg", "2_sto.jpg",  "3_sto.jpg"],
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum"
+    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
+    "lookingfor": "A concentious tidy student"
 }, {
     "id": 3,
     "name": "Brook St house",
@@ -48,7 +50,8 @@
     "large": ["brook_large.jpg", "brook_large1.jpg",  "brook_large2.jpg", "brook_large3.jpg"],
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum"
+    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
+    "lookingfor": "A party lover"
 }, {
     "id": 4,
     "name": "Gipping St roomshare",
@@ -64,7 +67,8 @@
     "large": ["gipping_large.jpg", "gipping_large1.jpg",  "gipping_large2.jpg", "gipping_large3.jpg"],
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum"
+    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
+    "lookingfor": "Foriegn student prefereably"
 }, {
     "id": 5,
     "name": "Railton St roomshare",
@@ -80,5 +84,6 @@
     "large": ["1_cla.jpg", "2_cla.jpg", "3_cla.jpg"],
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum"
+    "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
+    "lookingfor": "Someone tidy"
 }]

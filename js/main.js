@@ -30,11 +30,11 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         $("#sms").html(sms);
     
         const emailicon = `<a href="mailto:+${p.email}"><i class="fas fa-envelope-square"></i></a>`;
-        $("#emailicon").html(emailicon);
+        $("#email").html(emailicon);
        
 
         $("#address").html(`Address: ${p.address}`);
-        $("#email").html(`Email: ${p.email}`);
+        $("#lookingfor").html(`Looking for: ${p.lookingfor}`);
 
         /*  When favourite button is tapped I call the  addFaves helper function
         which adds the favourite to local storage. I then called getMarked which changes the button/message that appears on the
