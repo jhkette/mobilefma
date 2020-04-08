@@ -128,6 +128,12 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
       .fail(function (status) {
         $("#desc").html(`${status.status} error. There was an error retreiving data`); // i'm adding a message if there was an error retreiving data.
     });
+
+    $('#favourite').on("tap", function() {
+      setTimeout(function(){
+        $("#popupHouse").popup("close");
+      },2500)
+    });
     // close popup on tap of 'x'
     $("#close").on("tap", function () {
        $("#popupImage").popup("close");

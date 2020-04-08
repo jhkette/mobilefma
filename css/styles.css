@@ -538,10 +538,12 @@ input[type="submit"] {
 #fave-list{
   list-style: none;
   margin-left: 0 !important;
+  margin-top: 2rem !important;
   padding-left: 0 !important;
   width: 70%;
   display: flex;
   flex-direction: column;
+
   
 }
 
