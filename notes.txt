@@ -1,22 +1,3 @@
-// check theme - needs to be installed globally correctly, DONE(Check)
-// jqm collapsiable set on property page (DONE - amend)
-// registration form (DONE -amend)
-// check html - remove unnessary divs (CHECK)
-// add readme 
-
-// ADD images
-// Tidy propety page
-
-
-
-// Look at it in firefox mobile
-
-//CSS CHNAGE NEEDED FOR MOBILE USABILITY/WORKING
-
-// change select from form - SHOULD BE VERTICAL
-// check with mobile form usability guidelines
-
-// line break for house links on property page DONE - changed page
-// use floats for image and text DONE
-
-// fix popup for added faves button
+// double check html/css validation
+// add slide images
+// fix feature link/image on home page

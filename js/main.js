@@ -175,7 +175,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 });
 
 // Helper functions
-
+/* Adds a favourite to local storage */
 function addFaves(fave) {
   const faves = getFaves(); // get faves - return an array of favourites or an empty array
   const found = faves.some(el => el.id === fave.id); //use 'some' function to check if the 'favourite' passed as a parameter is in the 'faves' array (ie is already a favourite)
@@ -184,13 +184,14 @@ function addFaves(fave) {
     localStorage.setItem("faves", JSON.stringify(faves)); // then add amended array to local storage
   }
 }
-
+/* This function removes a favourite from local storage */
 function removeFaves(id) {
   const faves = getFaves();
   const amendedFaves = faves.filter(fave => fave.id != id);
   localStorage.setItem("faves", JSON.stringify(amendedFaves));
 }
 
+/* This function gets favourites from local storage, returns an array of objects */
 function getFaves() {
   let faves;
   if (!localStorage.getItem("faves")) {
