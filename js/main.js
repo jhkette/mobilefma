@@ -37,14 +37,16 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         $("#address").html(`<span class="bold">Address:</span> ${p.address}`);
         $("#lookingfor").html(`<span class="bold">Looking for:</span> ${p.lookingfor}`);
 
-        /*  When favourite button is tapped I call the  addFaves helper function
+        /*  When the favourite button is pressed I call the  addFaves helper function
         which adds the favourite to local storage. I then call the popup to position it in the center of the screen */
         $("#favourite").on("tap", function () {
           addFaves(p);
+          getMarked(postid)
           $("#popupHouse").popup("open", {  
             x: ($(window).width() / 2),
             y: 200,     
-          });       
+          });
+            
         });
 
         /* ///// CODE FOR IMAGE POPUP ////// */
@@ -128,27 +130,19 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
               break;
           }
         });
+
+          // close the image popup on tap of 'x'
+        $("#close").on("tap", function () {
+          $("#popupImage").popup("close");
+        });
         /*//// End of code for image popup ////*/
       },"json")
       .fail(function (status) { 
         $("#desc").html(`${status.status} error. There was an error retreiving data`); // i'm adding a message if there was an error retreiving data.
       });
-
-    
-    // i'm calling the popup for favourite added via this code. This way I can set its x and y position - 
-    // ie control where it apppears
-    // $("#favourite").on("tap", function (){
-    //   $("#favourite").hide(); 
-     
-     
-    // });
-     
   
 
-    // close image popup on tap of 'x'
-    $("#close").on("tap", function () {
-       $("#popupImage").popup("close");
-    });
+  
     /* getMarked function takes a postId as a parameter (ie the post page) and checks to see if the that id is in local storage - it 
     then hides shows appropriate ui buttons / features */
     function getMarked(postid) {
