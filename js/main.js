@@ -9,20 +9,20 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
     getMarked(postid); // I call getMarked here with the postId as a parameter to see what 'favourite' message/button should appear.
     const popupwidth = $(window).width() * 0.95; // get screensize - multiply by 0.9.5
  
-    $.get("../data/houses.json", // get json data
+    $.get("data/houses.json", // get json data
       function (result, status) { 
         /*use 'filter' function to filter result by comparing it against the postId variable from url. 
          I destructure the result to get just the object from the array (as opposed to an object in an array).*/
         const [p] = result.filter(i => i.id == postid); 
         
         // Here I am adding the information using jquery 'html' function to parts of the individual property page
-        $('#leadimage').css("background-image", `url('../images/large/${p.lead}')`)
+        $('#leadimage').css("background-image", `url('images/large/${p.lead}')`)
         $("#desc").html(`${p.name}`)
         $("#room-info").html(p.longdescription)
         $("#area-info").html(p.area)
         $("#price").html(`Price ${p.price}`)
-        $("#room").html(`<img src= "../images/interior/${p.interior}"/>`)
-        $("#area").html(`<img src= "../images/area/${p.areaimg}"/>`)
+        $("#room").html(`<img src= "images/interior/${p.interior}"/>`)
+        $("#area").html(`<img src= "images/area/${p.areaimg}"/>`)
 
         const tel = `<a href="tel:+${p.telephone}"><i class="fas fa-phone"></i></a>`;
         $("#telephone").html(tel);
@@ -50,7 +50,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 
         // Helper function that returns a concatenated string with image variable from data file (the index of which comes from the counter argument). 
         function getImage(counter) {
-          return `../images/slide/${p.large[counter]}`;
+          return `images/slide/${p.large[counter]}`;
         }
  
         $("#popupImage").css("width", popupwidth); // give popup a CSS width in relation to screen width
@@ -138,11 +138,11 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
       $("#popupHouse").popup("open", {  
         x: ($(window).width() / 2),
         y: 200,  
-        transition: "slide"  
+      
       });
-      setTimeout(function(){ // i'm calling a settimeout function to make the popup disappear after 2.2 secs
+      setTimeout(function(){ // i'm calling a settimeout function to make the popup disappear after 4 secs
         $("#popupHouse").popup("close");
-      },2200)
+      },4000)
   })
 
     // close image popup on tap of 'x'

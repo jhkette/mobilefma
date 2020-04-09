@@ -545,7 +545,7 @@ input[type="submit"] {
 @media screen and (max-width: 375px) {
   .lead-image h1 {
    
-    font-size: 1.75em  !important;
+    font-size: 1.35em !important;
 
   }
   .lead-image.home h1 {

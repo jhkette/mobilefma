@@ -1,8 +1,0 @@
-// double check html/css validation
-// add slide images
-// fix feature link/image on home page DONE
-// check media queries on iphone DONE
-// fix fave added popup DONE
-see https://stackoverflow.com/questions/15039954/unable-to-position-popup-in-jquery-mobile
-
-// finish notes DONE
