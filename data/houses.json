@@ -15,7 +15,7 @@
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
     "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
-    "lookingfor": "A fun housemate"
+    "lookingfor": "A fun housemate."
     
        
 }, {
@@ -34,7 +34,7 @@
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
     "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
-    "lookingfor": "A concentious tidy student"
+    "lookingfor": "A conscientioustidy student."
 }, {
     "id": 3,
     "name": "Brook St house",
@@ -51,7 +51,7 @@
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
     "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
-    "lookingfor": "A party lover"
+    "lookingfor": "A party lover."
 }, {
     "id": 4,
     "name": "Gipping St roomshare",
@@ -68,7 +68,7 @@
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
     "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
-    "lookingfor": "Foriegn student prefereably"
+    "lookingfor": "Foreign student prefereably."
 }, {
     "id": 5,
     "name": "Railton St roomshare",
@@ -85,5 +85,5 @@
     "shortdescription": "lorem ipsum",
     "longdescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
     "area": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
-    "lookingfor": "Someone tidy"
+    "lookingfor": "Someone tidy."
 }]
