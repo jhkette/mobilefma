@@ -50,6 +50,15 @@ h1 {
   border-bottom: 7px solid #2a6793;
   margin-bottom: 40px;
 }
+
+#desc{
+  top: 65%;
+  left: 20px;
+ 
+  padding-left: 0;
+  font-size: 1.75rem !important;
+}
+
 .container.ui-content {
   padding: 0 !important;
   margin: 0 !important;
@@ -158,21 +167,19 @@ h1 {
   top: 90px;
   left: 50%;
   
-  margin-left: -150px;
+
   margin-bottom: 50px;
   padding-bottom: 1px;
   border-bottom: 7px solid #2a6793;
 }
 
-
-
-#desc{
-  top: 65%;
-  left: 175px;
- 
-  padding-left: 0;
-  font-size: 1.75rem !important;
+.lead-image.home h1 {
+  margin-left: -177px;
 }
+
+
+
+
 .property-table {
   padding: 15px;
 }
@@ -322,9 +329,6 @@ h1 {
   width: 290px;
 }
 
-/* .ui-btn{
-  padding: 25px !important;
-} */
 
 .ui-btn::after {
   background-size: 25px !important;
@@ -584,7 +588,7 @@ input[type="submit"] {
 }
 
 .item a {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -593,10 +597,14 @@ input[type="submit"] {
 /* responsive styles */
 @media screen and (max-width: 375px) {
   .lead-image h1 {
-    margin-left: -140px;
+   
     font-size: 1.75em  !important;
 
   }
+  .lead-image.home h1 {
+    margin-left: -154px;
+  }
+  
   .intro h2{
     font-size: 1.55rem
   }
@@ -609,6 +617,5 @@ input[type="submit"] {
   #desc{
     font-size: 1.55rem !important;
     
-  
   }
 }
