@@ -77,11 +77,14 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
           switch (true) {
             case counter == 1: 
               counter--; // counter - 1
+              /* I'm adding quite complex css here which is why it is so long. It is important for usability though - I am adding
+              both a linear gradient with an rgba value AND a background image to the popUpImage <div> (location  of image retrieved from getImage function). The gradient
+              darkens the image somewhat and ensures the popup controls can be seen */ 
               $("#popupImage").css("background-image",`linear-gradient(
                 to top right,
                 rgba(255, 255, 255, 0),
                 rgba(65, 65, 65, 0.53)
-              ),url(' ${getImage(counter)}')`)// set bg image
+              ),url(' ${getImage(counter)}')`) // set bg image
               $("#right").fadeOut(); // fadeout right arrow
               break;
             case counter == 2: 
