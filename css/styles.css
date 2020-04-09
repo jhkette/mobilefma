@@ -68,11 +68,14 @@ h1 {
 }
 .lead-image.feature {
   height: 290px !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 
-.lead-image {
+.lead-image.home {
   background-image: linear-gradient(
-      to bottom,
+      to bottom right,
       rgba(255, 255, 255, 0),
       rgba(65, 65, 65, 0.53)
     ),
@@ -96,6 +99,7 @@ h1 {
     ),
     url("../images/large/1_largelead.jpg");
     height: 200px !important;
+    background-size: cover;
 }
 
 
@@ -154,6 +158,7 @@ h1 {
 }
 .fa.fa-trash-o::before{
   font-size: 1.25rem;
+  padding: .5rem;
 }
 
 .lead-image h1 {
@@ -179,6 +184,8 @@ h1 {
 .lead-image.fave{
   background-image: url('../images/large/3_largelead.jpg');
   height: 200px;
+  background-position: center;
+  background-size: cover;
 }
 
 .ham.ui-link.ui-btn {

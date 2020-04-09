@@ -15,8 +15,8 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
          I destructure the result to get just the object from the array (as opposed to an object in an array).*/
         const [p] = result.filter(i => i.id == postid); 
         
-        // Here I am adding the information using jquery 'html' function to parts of the individual property page
-        $('#leadimage').css("background-image", `url('images/large/${p.lead}')`)
+        // Here I am adding the information to the individual property using jquery 'html' function to parts of the individual property page
+        $('#leadimage').css("background-image", `linear-gradient(to bottom left,rgba(255, 255, 255, 0),rgba(65, 65, 65, 0.53)), url('images/large/${p.lead}')`)
         $("#desc").html(`${p.name}`)
         $("#room-info").html(p.longdescription)
         $("#area-info").html(p.area)
