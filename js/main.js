@@ -72,7 +72,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         });
         /* on each swipe left - i'm checking for the value of counter then deducting the value
         by one - unless the value is zero. counter corrosponds to an index in an array of images in houses.json. I use the getImage 
-        function above to concatante the string to get the path for the image for the css background */
+        function above to concatante the string to get the image path for the css background */
         $("#popupImage").on("swipeleft", function () { // on swipeleft
           switch (true) {
             case counter == 1: 
@@ -134,18 +134,17 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
       });
 
   
-    const favePop = (popupwidth / 2) // get half screen width
-    // i'm calling popup manually so I can set its x and y position - ie control where it apppears
+    // i'm calling the popup for favourite added via this code. This way I can set its x and y position - ie control where it apppears
     $("#favourite").on("tap", function (){
       $("#popupHouse").popup("open", {  
-        x: favePop, 
+        x: (popupwidth / 2),
         y: 200,  
         transition: "slide"  
       });
-      setTimeout(function(){ // i'm calling a settimeout function to make the popup dissepear after 2.2 secs
+      setTimeout(function(){ // i'm calling a settimeout function to make the popup disappear after 2.2 secs
         $("#popupHouse").popup("close");
       },2200)
-})
+  })
 
 
 

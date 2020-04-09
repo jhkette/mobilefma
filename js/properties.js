@@ -1,4 +1,4 @@
-/* Code thats is run if page == properties */
+/* Properties page */
 $(document).on("pagecontainerbeforeshow", function () {
   const thisPage = $.mobile.pageContainer.pagecontainer('getActivePage' ).attr( 'id' );
   if(thisPage == 'properties'){ // if thisPage == properties run ...
@@ -12,13 +12,11 @@ $(document).on("pagecontainerbeforeshow", function () {
       
       });
 
-      $("#houses").html(h); // add h as as html to #houses listview
+      $("#houses").html(h); // add h as html to #houses listview
       $("#houses").listview('refresh');
     }, "json")
     .fail(function(status) { // if fetching data fails send error message
-      $("#houses").html(
-        status.status + " error. There was an error retreiving data"
-      );
+      $("#houses").html(status.status + " error. There was an error retreiving data");
     });
   }
 });
