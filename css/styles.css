@@ -343,6 +343,12 @@ h1 {
   background-color: #2a6793;
   padding: 18px;
 }
+.ui-link.ui-btn.ui-icon-search.ui-btn-icon-top{
+  border: 0;
+  background-color: #2a6793;
+  padding: 18px;
+
+}
 
 .ui-link.ui-btn.ui-icon-user.ui-btn-icon-top {
   border: 0;

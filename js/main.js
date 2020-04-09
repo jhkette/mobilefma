@@ -39,7 +39,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 
         /*  When favourite button is tapped I call the  addFaves helper function
         which adds the favourite to local storage. I then called getMarked which changes the button/message that appears on the
-        individual property page - depending on if the page is a favourite or not */
+        individual property page. The button that appears depends on if the page is a favourite or not */
         $("#favourite").on("tap", function () {
           addFaves(p);
           getMarked(postid);
@@ -130,19 +130,17 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         $("#desc").html(`${status.status} error. There was an error retreiving data`); // i'm adding a message if there was an error retreiving data.
     });
 
-    // $('#favourite').on("tap", function() {
-      
-    // });
+  
 
     $("#favourite").on("tap", function (){
     $("#popupHouse").popup("open", {  
       x: popupwidth / 2,  
       y: 200,  
-      // transition: "reverse slide"  
+      transition: "slide"  
   });
   setTimeout(function(){
     $("#popupHouse").popup("close");
-  },2000)
+  },2200)
 })
 
 
@@ -190,9 +188,9 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 // Helper functions
 /* Adds a favourite to local storage */
 function addFaves(fave) {
-  const faves = getFaves(); // get faves - return an array of favourites or an empty array
+  const faves = getFaves(); // get faves - returns an array of favourites or an empty array
   const found = faves.some(el => el.id === fave.id); //use 'some' function to check if the 'favourite' passed as a parameter is in the 'faves' array (ie is already a favourite)
-  if (!found) { // if not in favourites push to the faves array
+  if (!found) { // if not already in favourites push to the faves array
     faves.push(fave);
     localStorage.setItem("faves", JSON.stringify(faves)); // then add amended array to local storage
   }
