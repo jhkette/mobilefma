@@ -38,11 +38,13 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         $("#lookingfor").html(`<span class="bold">Looking for:</span> ${p.lookingfor}`);
 
         /*  When favourite button is tapped I call the  addFaves helper function
-        which adds the favourite to local storage. I then called getMarked which changes the button/message that appears on the
-        individual property page. The button that appears depends on if the page is a favourite or not */
+        which adds the favourite to local storage. I then call the popup to position it in the center of the screen */
         $("#favourite").on("tap", function () {
           addFaves(p);
-          getMarked(postid);
+          $("#popupHouse").popup("open", {  
+            x: ($(window).width() / 2),
+            y: 200,     
+          });       
         });
 
         /* ///// CODE FOR IMAGE POPUP ////// */
@@ -132,18 +134,16 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         $("#desc").html(`${status.status} error. There was an error retreiving data`); // i'm adding a message if there was an error retreiving data.
       });
 
+    
+    // i'm calling the popup for favourite added via this code. This way I can set its x and y position - 
+    // ie control where it apppears
+    // $("#favourite").on("tap", function (){
+    //   $("#favourite").hide(); 
+     
+     
+    // });
+     
   
-    // i'm calling the popup for favourite added via this code. This way I can set its x and y position - ie control where it apppears
-    $("#favourite").on("tap", function (){
-      $("#popupHouse").popup("open", {  
-        x: ($(window).width() / 2),
-        y: 200,  
-      
-      });
-      setTimeout(function(){ // i'm calling a settimeout function to make the popup disappear after 4 secs
-        $("#popupHouse").popup("close");
-      },4000)
-  })
 
     // close image popup on tap of 'x'
     $("#close").on("tap", function () {

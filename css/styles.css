@@ -509,13 +509,16 @@ input[type="submit"] {
 .container.orchard{
   position: relative;
 }
-
+#popupHouse {
+  background-color: #2A6793;
+  padding: 1rem;
+}
 
 #popupHouse p {
   font-weight: 900;
   margin: auto;
   padding: .3rem .8rem;
-
+  color: white;
 } 
 
 
@@ -535,21 +538,19 @@ input[type="submit"] {
   display: flex;
   justify-content: space-between;
   font-size: 1.1rem;
+  margin-bottom: 3rem;
 }
 
-.item a {
-  margin-bottom: 2rem;
-}
 
 /* responsive styles */
 @media screen and (max-width: 375px) {
   .lead-image h1 {
    
-    font-size: 1.35em !important;
+    font-size: 1.55em !important;
 
   }
   .lead-image.home h1 {
-    margin-left: -154px;
+    margin-left: -137px;
   }
   
   .intro h2{
