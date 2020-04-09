@@ -126,21 +126,22 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         });
         /*//// End of code for image popup ////*/
       },"json")
-      .fail(function (status) {
+      .fail(function (status) { 
         $("#desc").html(`${status.status} error. There was an error retreiving data`); // i'm adding a message if there was an error retreiving data.
-    });
+      });
 
   
-
+    const favePop = (popupwidth / 2) // get half screen width
+    // i'm calling popup manually so I can set its x and y position - ie control where it apppears
     $("#favourite").on("tap", function (){
-    $("#popupHouse").popup("open", {  
-      x: popupwidth / 2,  
-      y: 200,  
-      transition: "slide"  
-  });
-  setTimeout(function(){
-    $("#popupHouse").popup("close");
-  },2200)
+      $("#popupHouse").popup("open", {  
+        x: favePop, 
+        y: 200,  
+        transition: "slide"  
+      });
+      setTimeout(function(){ // i'm calling a settimeout function to make the popup dissepear after 2.2 secs
+        $("#popupHouse").popup("close");
+      },2200)
 })
 
 
@@ -185,7 +186,8 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
   }
 });
 
-// Helper functions
+// Helper functions //
+
 /* Adds a favourite to local storage */
 function addFaves(fave) {
   const faves = getFaves(); // get faves - returns an array of favourites or an empty array

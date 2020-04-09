@@ -273,8 +273,7 @@ h1 {
 }
 
 .content-featured.blue img {
-  position: relative;
-  top: -10px;
+padding-top: 20px;
 }
 
 .feature-text {
