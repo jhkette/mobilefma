@@ -1,13 +1,13 @@
 
+//* Code for Property detail page *//
+
 $(document).on("pagecontainerbeforeshow", function (e, ui) {
   const thisPage = $.mobile.pageContainer.pagecontainer("getActivePage").attr("id");
-  if (thisPage == "orchard") {
+  if (thisPage == "orchard") { // if thisPage == orchard run ...
     const urlParams = new URLSearchParams(window.location.search);
     const postid = urlParams.get("post");
-    getMarked(postid);
+    getMarked(postid); // I call getMarked here with the postId as a parameter to see what 'favourite' message/button should appear.
     const popupwidth = $(window).width() * 0.95; // get screensize - multiply by 0.9.5
-
-
  
     $.get("../data/houses.json", // get json data
       function (result, status) { 
@@ -47,15 +47,14 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 
         /* ///// CODE FOR IMAGE POPUP ////// */
         let counter = 1; // initialise counter variable
-        
+
+        // Helper function that returns a concatenated string with image variable from data file (the index of which comes from the counter argument). 
         function getImage(counter) {
           return `../images/slide/${p.large[counter]}`;
         }
-
-        
+ 
         $("#popupImage").css("width", popupwidth); // give popup a CSS width in relation to screen width
-       
-
+      
         /* This function resets the popup the orginal background image etc each times it is called
          popupbeforeposition is fired each time just before popup appears */
         $("#popupImage").on({
@@ -137,7 +136,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
     // i'm calling the popup for favourite added via this code. This way I can set its x and y position - ie control where it apppears
     $("#favourite").on("tap", function (){
       $("#popupHouse").popup("open", {  
-        x: (popupwidth / 2),
+        x: ($(window).width() / 2),
         y: 200,  
         transition: "slide"  
       });
@@ -145,8 +144,6 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
         $("#popupHouse").popup("close");
       },2200)
   })
-
-
 
     // close image popup on tap of 'x'
     $("#close").on("tap", function () {
@@ -168,7 +165,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
   }
 });
 
-/* Code thats is run if page == favourites */
+//* Favourites page code *//
 $(document).on("pagecontainerbeforeshow", function (e, ui) {
   const thisPage = $.mobile.pageContainer.pagecontainer("getActivePage").attr("id");
   if (thisPage == "favourites") {  // if thisPage == favourites run ...
@@ -199,6 +196,7 @@ function addFaves(fave) {
     localStorage.setItem("faves", JSON.stringify(faves)); // then add amended array to local storage
   }
 }
+
 /* This function removes a favourite from local storage */
 function removeFaves(id) {
   const faves = getFaves();
