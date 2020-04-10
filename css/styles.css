@@ -544,6 +544,7 @@ input[type="submit"] {
   width: 90%;
   display: flex;
   flex-direction: column;
+  min-height: 30vh;
   
 }
 
