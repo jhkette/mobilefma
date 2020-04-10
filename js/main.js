@@ -6,7 +6,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
   if (thisPage == "orchard") { // if thisPage == orchard run ...
     const urlParams = new URLSearchParams(window.location.search);
     const postid = urlParams.get("post");
-    getMarked(postid); // I call getMarked here with the postId as a parameter to see what 'favourite' message/button should appear.
+    getMarked(postid); // I call getMarked here with the postId as an argument to see what 'favourite' message/button should appear.
     const popupwidth = $(window).width() * 0.95; // get screensize - multiply by 0.9.5
  
     $.get("data/houses.json", // get json data

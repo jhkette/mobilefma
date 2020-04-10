@@ -91,6 +91,13 @@ h1 {
   height: 385px;
 }
 
+.lead-image.about{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
 .lead-image.small{
   background-image: linear-gradient(
       to bottom,
